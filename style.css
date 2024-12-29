@@ -7,67 +7,71 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* צבע רקע כללי */
+    background-color: #f9f9f9; /* צבע רקע */
 }
 
 header {
-    background-color: #4CAF50; /* צבע ירוק נעים לכותרת */
+    background-color: #008080; /* צבע ירוק כהה */
     color: white;
-    padding: 20px 0; /* רווח פנימי */
-    text-align: center; /* מרכז את הטקסט */
+    padding: 20px 0;
+    text-align: center;
 }
 
 nav ul {
     padding: 0;
-    list-style-type: none; /* מבטל רשימה */
+    list-style-type: none;
 }
 
 nav ul li {
-    display: inline; /* ממשק שורה ישרה */
-    margin: 0 15px; /* מרווח בין פריטים */
+    display: inline; /* רשימה באותו שורה */
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: white; /* צבע הקישורים */
-    text-decoration: none; /* מסיר קו תחתון */
+    color: white;
+    text-decoration: none;
     font-weight: bold; /* טקסט מודגש */
 }
 
 nav ul li a:hover {
-    color: #d1f1d1; /* צבע קישור בעת ריחוף */
+    color: #d1f1d1; /* צבע קישורים על hover */
 }
 
 main {
-    padding: 20px; /* רווח פנימי לדף המרכזי */
+    padding: 20px; /* רווחים לדף המרכזי */
 }
 
 section {
-    margin-bottom: 30px; /* מרווח בין חלקים */
-    padding: 20px; /* רווח פנימי */
-    background-color: white; /* צבע רקע לבן לכל חלק */
-    border-radius: 8px; /* מעגל פינות */
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white; /* צבע רקע */
+    border-radius: 8px; /* פ corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* צל */
 }
 
+.brand {
+    margin-bottom: 20px; /* רווח בין המותגים */
+    border: 1px solid #ccc; /* גבול פשוט */
+    border-radius: 8px; /* פ corners */
+    padding: 10px;
+}
+
 .product {
-    margin: 15px 0; /* מרווח סביב כל מוצר */
-    padding: 10px; /* רווח פנימי */
-    transition: transform 0.3s; /* אפקט בעת ריחוף */
+    margin: 15px 0; /* רווח בין מוצרים */
+    text-align: center; /* מרכז את הטקסט */
 }
 
 .product img {
-    width: 100%; /* תמונה מתאימה לרוחב המוצר */
-    border-radius: 8px; /* מעגל פינות */
-}
-
-.product:hover {
-    transform: scale(1.05); /* אפקט הרחבה על ריחוף */
+    width: 100%; /* גובה מותאם */
+    border-radius: 8px; /* פ corners */
 }
 
 footer {
-    text-align: center; /* מרכז את הטקסט */
-    padding: 15px 0; /* רווח פנימי */
-    background-color: #4CAF50; /* צבע רקע ירוק */
-    color: white; /* צבע הטקסט */
-    width: 100%; /* לצד השורות בצדדים */
+    text-align: center;
+    padding: 15px 0;
+    background-color: #008080; /* צבע כמו כותרת */
+    color: white;
+    width: 100%;
+    position: relative;
+    bottom: 0;
 }
