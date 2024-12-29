@@ -1,13 +1,19 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset some default styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* צבע רקע לסביבה נקייה */
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* צבע ירוק נעים */
     color: white;
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: center;
 }
 
@@ -24,21 +30,43 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    transition: 0.3s; /* אפקט עבור מעבר בין צבעים */
+}
+
+nav ul li a:hover {
+    color: #d1f1d1; /* צבע קישורים בכיוון מעבר */
 }
 
 main {
     padding: 20px;
 }
 
+section {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: white; /* צבע הרקע של כל חלק */
+    border-radius: 8px; /* פינות מעוגלות */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* צל לפיתוח חוויית המשתמש */
+}
+
 .product {
     border: 1px solid #ddd;
     margin: 10px 0;
     padding: 10px;
+    transition: transform 0.3s; /* אפקט הרחבה */
+}
+
+.product h3 {
+    margin-bottom: 10px;
+}
+
+.product:hover {
+    transform: scale(1.02); /* אפקט ההרחבה על מוצר */
 }
 
 footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
     background-color: #4CAF50;
     color: white;
     position: relative;
