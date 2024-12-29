@@ -13,7 +13,7 @@ body {
 header {
     background-color: #4CAF50; /* צבע ירוק נעים */
     color: white;
-    padding: 15px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -30,6 +30,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
     transition: 0.3s; /* אפקט מעבר צבעים */
 }
 
@@ -44,7 +45,7 @@ main {
 section {
     margin-bottom: 30px;
     padding: 20px;
-    background-color: white; /* צבע רקע של החלקים */
+    background-color: white; /* צבע הרקע של כל חלק */
     border-radius: 8px; /* פ corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* צל */
     text-align: center; /* מרכז את המלל */
@@ -60,6 +61,7 @@ section {
     margin: 15px;
     padding: 10px;
     transition: transform 0.3s; /* אפקט על hover */
+    text-align: left;
 }
 
 .product img {
@@ -68,7 +70,7 @@ section {
 }
 
 .product:hover {
-    transform: scale(1.02); /* אפקט הרכבת */
+    transform: scale(1.05); /* אפקט הרכבת */
 }
 
 footer {
