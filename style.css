@@ -1,4 +1,3 @@
-/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,71 +6,61 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9; /* צבע רקע */
+    background-color: #f4f4f4; /* צבע רקע כללי */
 }
 
 header {
-    background-color: #008080; /* צבע ירוק כהה */
+    background-color: #008080; /* צבע כותרת */
     color: white;
     padding: 20px 0;
-    text-align: center;
+    text-align: center; /* מרכז את הכותרת */
 }
 
 nav ul {
     padding: 0;
-    list-style-type: none;
+    list-style-type: none; /* מבטל רשימה */
 }
 
 nav ul li {
-    display: inline; /* רשימה באותו שורה */
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold; /* טקסט מודגש */
-}
-
-nav ul li a:hover {
-    color: #d1f1d1; /* צבע קישורים על hover */
+    display: inline; /* ממשק שורה ישרה */
+    margin: 0 15px; /* רווח בין הפריטים */
 }
 
 main {
-    padding: 20px; /* רווחים לדף המרכזי */
+    padding: 20px; /* רווח פנימי לדף המרכזי */
 }
 
 section {
     margin-bottom: 30px;
     padding: 20px;
-    background-color: white; /* צבע רקע */
+    background-color: white; /* צבע הרקע של כל חלק */
     border-radius: 8px; /* פ corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* צל */
 }
 
 .brand {
-    margin-bottom: 20px; /* רווח בין המותגים */
+    margin-bottom: 20px; /* מרווח בין המותגים */
+    padding: 10px;
     border: 1px solid #ccc; /* גבול פשוט */
     border-radius: 8px; /* פ corners */
-    padding: 10px;
+    background-color: #f9f9f9; /* צבע רקע חלונית */
 }
 
 .product {
-    margin: 15px 0; /* רווח בין מוצרים */
-    text-align: center; /* מרכז את הטקסט */
+    margin: 10px 0; /* מרווח סביב כל מוצר */
+    border-top: 1px solid #ddd; /* גבול מעל המוצר */
+    padding-top: 10px; /* רווח פנימי עליון */
 }
 
 .product img {
-    width: 100%; /* גובה מותאם */
+    width: 100%; /* תמונה מותאמת לרוחב החלונית */
     border-radius: 8px; /* פ corners */
 }
 
 footer {
-    text-align: center;
-    padding: 15px 0;
-    background-color: #008080; /* צבע כמו כותרת */
-    color: white;
-    width: 100%;
-    position: relative;
-    bottom: 0;
+    text-align: center; /* טקסט ממורכז בכותרת תחתונה */
+    padding: 15px 0; /* רווח פנימי */
+    background-color: #008080; /* צבע כמו הכותרת */
+    color: white; /* צבע טקסט */
+    width: 100%; /* צדדים מסודרים */
 }
