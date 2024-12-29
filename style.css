@@ -66,12 +66,16 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.brand {
+.brands {
     margin-bottom: 20px;
-    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #f9f9f9;
+    padding: 10px;
+}
+
+.brand {
+    margin: 10px 0;
 }
 
 .product {
