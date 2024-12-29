@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4; /* צבע רקע לסביבה נקייה */
+    background-color: #f4f4f4; /* צבע רקע */
 }
 
 header {
@@ -30,7 +30,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    transition: 0.3s; /* אפקט עבור מעבר בין צבעים */
+    transition: 0.3s; /* אפקט מעבר צבעים */
 }
 
 nav ul li a:hover {
@@ -44,31 +44,31 @@ main {
 section {
     margin-bottom: 30px;
     padding: 20px;
-    background-color: white; /* צבע הרקע של כל חלק */
-    border-radius: 8px; /* תצורת פינות מעוגלות */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* צל לפיתוח חוויית המשתמש */
+    background-color: white; /* צבע רקע של החלקים */
+    border-radius: 8px; /* פ corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* צל */
     text-align: center; /* מרכז את המלל */
 }
 
 .home-content {
-    margin: auto; /* מרווח אוטומטי כדי למרכז את התוכן */
-    max-width: 800px; /* גובה המקסימום לתוכן */
+    margin: auto; /* מרווח אוטומטי */
+    max-width: 800px; /* גובה המקסימום */
 }
 
 .product {
     border: 1px solid #ddd;
     margin: 15px;
     padding: 10px;
-    transition: transform 0.3s; /* אפקט הרחבה */
+    transition: transform 0.3s; /* אפקט על hover */
 }
 
 .product img {
-    width: 100%; /* משנה את גובה התמונה */
+    width: 100%; /* תמונה מלא */
     border-radius: 8px; /* פ corners */
 }
 
 .product:hover {
-    transform: scale(1.02); /* אפקט ההרחבה על מוצר כשתעבור עליו עם העכבר */
+    transform: scale(1.02); /* אפקט הרכבת */
 }
 
 footer {
