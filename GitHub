@@ -1,1 +1,4 @@
 
+git add index.html
+git commit -m "הוספת תמונות ושינוי שם החנות ל'פיצו לגן ולקבלן'"
+git push origin master
