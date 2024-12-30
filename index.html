@@ -5,8 +5,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>פיצו לגן ולקבלן</title>
-    <link rel="stylesheet" href="style.css"> <!-- קישור לקובץ CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- קישור לאייקונים -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #3F51B5; /* צבע רקע כהה */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            background: #EDE7F6; /* צבע בהיר */
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .btn {
+            background: #FF5722; /* צבע כפתור */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #FF8A65; /* צבע כפתור בהונאה */
+        }
+
+        #products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px; /* רווח בין הכרטיסים */
+            padding: 20px; 
+        }
+
+        .product {
+            border: 1px solid #DDD;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product:hover {
+            transform: scale(1.05); /* אפקט צמיחה בהונאה */
+        }
+
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0; 
+            top: 0; 
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -34,109 +136,15 @@
             <h2>מוצרים</h2>
             
             <div class="brands">
-                <h3>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/DeWalt_logo.svg/2560px-DeWalt_logo.svg.png" alt="דיוולט" style="width: 30px; vertical-align: middle;"/> 
-                    DEWALT
-                </h3>
-                <div class="brand">
-                    <div class="product">
-                        <h4>דגם 1DEWALT</h4>
-                        <img src="https://m.media-amazon.com/images/I/61FJTP4X7TL._AC_SX679_.jpg" alt="מוצר דיוולט" />
-                        <p>מוצר מדהים שמחזיק לאורך זמן.</p>
-                        <button class="btn" onclick="openModal('dewalt')">פרטים נוספים</button>
-                    </div>
-                    <div class="product">
-                        <h4>דגם 2DEWALT</h4>
-                        <img src="https://m.media-amazon.com/images/I/61FJTP4X7TL._AC_SX679_.jpg" alt="מוצר דיוולט" />
-                        <p>מוצר נוסף מדהים.</p>
-                        <button class="btn" onclick="openModal('dewalt')">פרטים נוספים</button>
-                    </div>
+                <h3>DEWALT</h3>
+                <div class="product">
+                    <h4>דגם 1DEWALT</h4>
+                    <img src="https://m.media-amazon.com/images/I/61FJTP4X7TL._AC_SX679_.jpg" alt="מוצר דיוולט" />
+                    <p>מוצר מדהים שמחזיק לאורך זמן.</p>
+                    <button class="btn" onclick="openModal('dewalt')">פרטים נוספים</button>
                 </div>
             </div>
-
-            <div class="brands">
-                <h3>
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/89/Makita_logo.svg/2560px-Makita_logo.svg.png" alt="מקיטה" style="width: 30px; vertical-align: middle;"/> 
-                    Makita
-                </h3>
-                <div class="brand">
-                    <div class="product">
-                        <h4>דגם 1Makita</h4>
-                        <img src="https://m.media-amazon.com/images/I/61MLCCVf9pL._AC_SX679_.jpg" alt="מוצר מקיטה" />
-                        <p>מוצר איכותי שמציע פתרונות אמינים.</p>
-                        <button class="btn" onclick="openModal('makita')">פרטים נוספים</button>
-                    </div>
-                    <div class="product">
-                        <h4>דגם 2Makita</h4>
-                        <img src="https://m.media-amazon.com/images/I/61MLCCVf9pL._AC_SX679_.jpg" alt="מוצר מקיטה" />
-                        <p>מוצר נוסף מדהים מקיטה.</p>
-                        <button class="btn" onclick="openModal('makita')">פרטים נוספים</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="brands">
-                <h3>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Husqvarna_logo.svg/2560px-Husqvarna_logo.svg.png" alt="אוסקוורנה" style="width: 30px; vertical-align: middle;"/> 
-                    HUSQVARNA
-                </h3>
-                <div class="brand">
-                    <div class="product">
-                        <h4>דגם 1HUSQVARNA</h4>
-                        <img src="https://m.media-amazon.com/images/I/71XXdWoSieL._AC_SX679_.jpg" alt="מוצר אוסקוורנה" />
-                        <p>הפתרון המושלם לכל אחד.</p>
-                        <button class="btn" onclick="openModal('husqvarna')">פרטים נוספים</button>
-                    </div>
-                    <div class="product">
-                        <h4>דגם 2HUSQVARNA</h4>
-                        <img src="https://m.media-amazon.com/images/I/71XXdWoSieL._AC_SX679_.jpg" alt="מוצר אוסקוורנה" />
-                        <p>מוצר נוסף מדהים אוסקוורנה.</p>
-                        <button class="btn" onclick="openModal('husqvarna')">פרטים נוספים</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="brands">
-                <h3>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Bosch_logo.svg/2560px-Bosch_logo.svg.png" alt="בוש" style="width: 30px; vertical-align: middle;"/> 
-                    BOSCH
-                </h3>
-                <div class="brand">
-                    <div class="product">
-                        <h4>דגם 1BOSCH</h4>
-                        <img src="https://m.media-amazon.com/images/I/81Ad7+l3gWL._AC_SX679_.jpg" alt="מוצר בוש" />
-                        <p>מותג אמין עם פתרונות מתקדמים.</p>
-                        <button class="btn" onclick="openModal('bosch')">פרטים נוספים</button>
-                    </div>
-                    <div class="product">
-                        <h4>דגם 2BOSCH</h4>
-                        <img src="https://m.media-amazon.com/images/I/81Ad7+l3gWL._AC_SX679_.jpg" alt="מוצר בוש" />
-                        <p>מוצר נוסף איכותי מבית בוש.</p>
-                        <button class="btn" onclick="openModal('bosch')">פרטים נוספים</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="brands">
-                <h3>
-                    <img src="https://example.com/path/to/accessories-logo.png" alt="אביזרים" style="width: 30px; vertical-align: middle;"/> 
-                    אביזרים
-                </h3>
-                <div class="brand">
-                    <div class="product">
-                        <h4>אביזר 1</h4>
-                        <img src="https://example.com/path/to/accessory1.jpg" alt="אביזר 1" />
-                        <p>אביזר איכותי.</p>
-                        <button class="btn" onclick="openModal('accessories')">פרטים נוספים</button>
-                    </div>
-                    <div class="product">
-                        <h4>אביזר 2</h4>
-                        <img src="https://example.com/path/to/accessory2.jpg" alt="אביזר 2" />
-                        <p>אביזר שימושי.</p>
-                        <button class="btn" onclick="openModal('accessories')">פרטים נוספים</button>
-                    </div>
-                </div>
-            </div>
+            <!-- הוסף מוצרים נוספים באותו פורמט -->
         </section>
 
         <section id="about">
@@ -158,35 +166,23 @@
     </footer>
 
     <script>
-      function openModal(brand) {
-          const modal = document.getElementById("modal");
-          const title = document.getElementById("modal-title");
-          const description = document.getElementById("modal-description");
+        function openModal(brand) {
+            const modal = document.getElementById("modal");
+            const title = document.getElementById("modal-title");
+            const description = document.getElementById("modal-description");
 
-          if (brand === 'dewalt') {
-              title.innerText = 'דגמים של דיוולט';
-              description.innerHTML = '<ul><li>דגם 1 - תיאור</li><li>דגם 2 - תיאור</li></ul>';
-          } else if (brand === 'makita') {
-              title.innerText = 'דגמים של מקיטה';
-              description.innerHTML = '<ul><li>דגם 1 - תיאור</li><li>דגם 2 - תיאור</li></ul>';
-          } else if (brand === 'husqvarna') {
-              title.innerText = 'דגמים של אוסקוורנה';
-              description.innerHTML = '<ul><li>דגם 1 - תיאור</li><li>דגם 2 - תיאור</li></ul>';
-          } else if (brand === 'bosch') {
-              title.innerText = 'דגמים של בוש';
-              description.innerHTML = '<ul><li>דגם 1 - תיאור</li><li>דגם 2 - תיאור</li></ul>';
-          } else if (brand === 'accessories') {
-              title.innerText = 'דגמים של אביזרים';
-              description.innerHTML = '<ul><li>אביזר 1 - תיאור</li><li>אביזר 2 - תיאור</li></ul>';
-          }
+            if (brand === 'dewalt') {
+                title.innerText = 'דגמים של דיוולט';
+                description.innerHTML = '<ul><li>דגם 1 - תיאור</li></ul>';
+            }
 
-          modal.style.display = "block";
-      }
+            modal.style.display = "block";
+        }
 
-      function closeModal() {
-          const modal = document.getElementById("modal");
-          modal.style.display = "none";
-      }
+        function closeModal() {
+            const modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
     </script>
 </body>
 </html>
