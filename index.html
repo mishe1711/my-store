@@ -33,6 +33,7 @@
         nav ul {
             list-style: none;
             padding: 0;
+            text-align: center;
         }
 
         nav ul li {
@@ -43,6 +44,12 @@
         nav a {
             color: white;
             text-decoration: none;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            background: #FF5722;
+            border-radius: 5px; /* פינות מעוגלות בעת ריחוף */
         }
 
         .hero {
@@ -91,16 +98,17 @@
             transition: transform 0.3s;
             cursor: pointer; 
             height: 150px; /* גובה קבוע לחלוניות */
+            background-color: #FFFFFF; /* צבע רקע חלונית */
         }
 
         /* צבעי רקע מותאמים לכל מותג */
-        .brand-dewalt { background-color: #FFD700; } /* דיוולט */
-        .brand-makita { background-color: #009688; } /* מקיטה */
-        .brand-milwaukee { background-color: #D00000; } /* מילוקי */
-        .brand-bosch { background-color: #4CAF50; } /* בוש */
-        .brand-hikoki { background-color: #FF5722; } /* היקוקי */
-        .brand-kress { background-color: #F0F0F0; } /* קרס */
-        .brand-rex { background-color: #616161; } /* ורקס */
+        .brand-dewalt { background-color: #FFD700; }
+        .brand-makita { background-color: #009688; }
+        .brand-milwaukee { background-color: #D00000; }
+        .brand-bosch { background-color: #4CAF50; }
+        .brand-hikoki { background-color: #FF5722; }
+        .brand-kress { background-color: #F0F0F0; }
+        .brand-rex { background-color: #616161; }
 
         .product:hover {
             transform: scale(1.05); /* אפקט צמיחה */
@@ -129,6 +137,17 @@
                     <li><a href="#contact">יצירת קשר</a></li>
                 </ul>
             </nav>
+            <nav>
+                <ul>
+                    <li><a href="#tools">כלי עבודה נטענים וחשמליים</a></li>
+                    <li><a href="#saws">מסורים</a></li>
+                    <li><a href="#accessories">אביזרים נלווים</a></li>
+                    <li><a href="#construction">ציוד לבניין ולתעשייה</a></li>
+                    <li><a href="#technical-equipment">ציוד טכני</a></li>
+                    <li><a href="#home-garden">לבית ולגן</a></li>
+                    <li><a href="#movers-tools">כלים למוסך</a></li>
+                </ul>
+            </nav>
         </header>
         
         <main>
@@ -148,39 +167,39 @@
                 <h2>מוצרים</h2>
 
                 <div class="product brand-dewalt">
-                    <h4>DEWALT</h4>
+                    <h4>דגם 1 DEWALT</h4>
                     <p>מוצר מדהים שמחזיק לאורך זמן.</p>
                 </div>
                 <div class="product brand-dewalt">
-                    <h4>  DEWALT</h4>
+                    <h4>דגם 2 DEWALT</h4>
                     <p>מוצר נוסף מדהים.</p>
                 </div>
                 <div class="product brand-makita">
-                    <h4> Makita</h4>
+                    <h4>דגם 1 Makita</h4>
                     <p>מוצר איכותי שמציע פתרונות אמינים.</p>
                 </div>
                 <div class="product brand-makita">
-                    <h4> Makita</h4>
+                    <h4>דגם 2 Makita</h4>
                     <p>מוצר נוסף מדהים מקיטה.</p>
                 </div>
                 <div class="product brand-milwaukee">
-                    <h4> MILWAUKEE</h4>
+                    <h4>דגם 1 MILWAUKEE</h4>
                     <p>תוצר חזק ומהיר במיוחד.</p>
                 </div>
                 <div class="product brand-bosch">
-                    <h4> BOSCH</h4>
+                    <h4>דגם 1 BOSCH</h4>
                     <p>מותג אמין עם פתרונות מתקדמים.</p>
                 </div>
                 <div class="product brand-hikoki">
-                    <h4>  HIKOKI</h4>
+                    <h4>דגם 1 HIKOKI</h4>
                     <p>תוצר מדהים מבית היקוקי.</p>
                 </div>
                 <div class="product brand-kress">
-                    <h4> KRESS</h4>
+                    <h4>דגם 1 KRESS</h4>
                     <p>איכות גבוהה לכל הבנאים.</p>
                 </div>
                 <div class="product brand-rex">
-                    <h4>worx</h4>
+                    <h4>דגם 1 REX</h4>
                     <p>כלים איכותיים לכל עבודה.</p>
                 </div>
             </section>
