@@ -15,7 +15,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center; /* יישור למרכז */
-            background-color: #f1f1f1; /* צבע רקע שנשאר אחיד לשני החלקים */
+            background-color: #f1f1f1; /* צבע רקע אחיד */
         }
 
         #container {
@@ -278,10 +278,6 @@
 
     <script>
         let cart = [];
-
-        function openProduct(url) {
-            window.open(url, '_blank'); // פותח חלון חדש
-        }
 
         function toggleProducts(brand) {
             const productList = document.getElementById('product-list');
