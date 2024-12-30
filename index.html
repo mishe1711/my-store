@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>חנות פיצו - כלי עבודה</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <title>חנות כלי עבודה ופיצו לגן ולקבלן</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- קישור לאייקונים -->
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f1f1f1; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* יישור למרכז */
+            background-color: #f1f1f1; /* צבע רקע שנשאר אחיד לשני החלקים */
         }
 
         #container {
-            max-width: 1200px; 
-            margin: auto;
+            max-width: 1200px; /* הגבלת רוחב האתר */
             width: 100%;
         }
 
         header {
-            background: #3F51B5; 
+            background: #3F51B5; /* צבע רקע כהה */
             color: white;
-            padding: 20px 0;
+            padding: 10px 0;
             text-align: center;
         }
 
@@ -44,58 +46,77 @@
         }
 
         .hero {
-            background: #EDE7F6; 
+            background: #EDE7F6; /* צבע בהיר */
             padding: 20px 0;
             text-align: center;
+        }
+
+        .btn {
+            background: #FF5722; /* צבע כפתור */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #FF8A65; /* צבע כפתור בהונאה */
+        }
+
+        #search {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        #search input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
         #products {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px; 
+            gap: 15px; /* רווח בין הכרטיסים */
             padding: 20px; 
-            background-color: white;
         }
 
         .product {
             border: 1px solid #DDD;
             border-radius: 5px;
-            padding: 10px; 
+            padding: 15px;
             text-align: center;
             transition: transform 0.3s;
-            cursor: pointer; 
+            cursor: pointer; /* מצביע של עכבר */
         }
 
-        .product img {
-            max-height: 120px;
-            object-fit: contain;
+        .product:hover {
+            transform: scale(1.05); /* אפקט צמיחה בהונאה */
         }
+
+        /* צבעים עבור כל מותג */
+        .brand-dewalt { background-color: #FFD700; }
+        .brand-makita { background-color: #009688; }
+        .brand-husqvarna { background-color: #FF5722; }
+        .brand-bosch { background-color: #4CAF50; }
 
         footer {
             text-align: center;
             padding: 10px 0;
-            background: #3F51B5;
-            color: white;
         }
 
         .contact-info {
             margin: 20px 0;
             text-align: center;
         }
-
-        .promo-banner {
-            background-color: #FF5722; 
-            color: white;
-            padding: 10px;
-            text-align: center;
-            margin: 20px 0;
-        }
     </style>
 </head>
 <body>
     <div id="container">
         <header>
-            <h1>ברוכים הבאים לפיצו - חנות כלי עבודה</h1>
+            <h1>ברוכים הבאים לפיצו לגן ולקבלן!</h1>
             <nav>
                 <ul>
                     <li><a href="#home">בית</a></li>
@@ -107,64 +128,100 @@
         </header>
         
         <main>
-            <section id="home" class="hero">
-                <h2>המוצרים שלנו</h2>
-                <p>הציעה מגוונת של מוצרי איכות במחירים נוחים!</p>
+            <section id="search">
+                <input type="text" placeholder="חיפוש מוצרים...">
             </section>
 
-            <div class="promo-banner">
-                <p>מבצע מיוחד! 15% הנחה על כל המוצרים החדשים!</p>
-            </div>
+            <section id="home" class="hero">
+                <div class="hero-content">
+                    <h2>החנות שלנו</h2>
+                    <p>ברוכים הבאים לחנות שלנו, היעד האולטימטיבי למוצרים איכותיים במחירים נהדרים!</p>
+                    <a href="#products" class="btn">לראות מוצרים</a>
+                </div>
+            </section>
 
             <section id="products">
-                <h2>מוצרים זמינים</h2>
-                <div class="product">
-                    <h4>מקדחה חשמלית</h4>
-                    <img src="https://m.media-amazon.com/images/I/61FJTP4X7TL._AC_SX679_.jpg" alt="מקדחה חשמלית" />
-                    <p>מחיר: 299₪</p>
+                <h2>מוצרים</h2>
+                
+                <div class="brands brand-dewalt">
+                    <h3>DEWALT</h3>
+                    <div class="product" onclick="openProduct('https://example.com/dewalt1')">
+                        <h4>דגם 1 DEWALT</h4>
+                        <img src="https://m.media-amazon.com/images/I/61FJTP4X7TL._AC_SX679_.jpg" alt="מוצר דיוולט" />
+                        <p>מוצר מדהים שמחזיק לאורך זמן.</p>
+                    </div>
+                    <div class="product" onclick="openProduct('https://example.com/dewalt2')">
+                        <h4>דגם 2 DEWALT</h4>
+                        <img src="https://m.media-amazon.com/images/I/61FJTP4X7TL._AC_SX679_.jpg" alt="מוצר דיוולט" />
+                        <p>מוצר נוסף מדהים.</p>
+                    </div>
                 </div>
-                <div class="product">
-                    <h4>פטיש</h4>
-                    <img src="https://m.media-amazon.com/images/I/61MLCCVf9pL._AC_SX679_.jpg" alt="פטיש" />
-                    <p>מחיר: 89₪</p>
+
+                <div class="brands brand-makita">
+                    <h3>Makita</h3>
+                    <div class="product" onclick="openProduct('https://example.com/makita1')">
+                        <h4>דגם 1 Makita</h4>
+                        <img src="https://m.media-amazon.com/images/I/61MLCCVf9pL._AC_SX679_.jpg" alt="מוצר מקיטה" />
+                        <p>מוצר איכותי שמציע פתרונות אמינים.</p>
+                    </div>
+                    <div class="product" onclick="openProduct('https://example.com/makita2')">
+                        <h4>דגם 2 Makita</h4>
+                        <img src="https://m.media-amazon.com/images/I/61MLCCVf9pL._AC_SX679_.jpg" alt="מוצר מקיטה" />
+                        <p>מוצר נוסף מדהים מקיטה.</p>
+                    </div>
                 </div>
-                <div class="product">
-                    <h4>מסור עץ</h4>
-                    <img src="https://m.media-amazon.com/images/I/71XXdWoSieL._AC_SX679_.jpg" alt="מסור עץ" />
-                    <p>מחיר: 199₪</p>
+
+                <div class="brands brand-husqvarna">
+                    <h3>HUSQVARNA</h3>
+                    <div class="product" onclick="openProduct('https://example.com/husqvarna1')">
+                        <h4>דגם 1 HUSQVARNA</h4>
+                        <img src="https://m.media-amazon.com/images/I/71XXdWoSieL._AC_SX679_.jpg" alt="מוצר אוסקוורנה" />
+                        <p>הפתרון המושלם לכל אחד.</p>
+                    </div>
+                    <div class="product" onclick="openProduct('https://example.com/husqvarna2')">
+                        <h4>דגם 2 HUSQVARNA</h4>
+                        <img src="https://m.media-amazon.com/images/I/71XXdWoSieL._AC_SX679_.jpg" alt="מוצר אוסקוורנה" />
+                        <p>מוצר נוסף מדהים אוסקוורנה.</p>
+                    </div>
                 </div>
-                <div class="product">
-                    <h4>אוזניות עבודה</h4>
-                    <img src="https://m.media-amazon.com/images/I/81Ad7+l3gWL._AC_SX679_.jpg" alt="אוזניות עבודה" />
-                    <p>מחיר: 149₪</p>
-                </div>
-                <div class="product">
-                    <h4>מכונת ברזל</h4>
-                    <img src="https://m.media-amazon.com/images/I/81ML9E-beUL._AC_SX679_.jpg" alt="מכונת ברזל" />
-                    <p>מחיר: 499₪</p>
-                </div>
-                <div class="product">
-                    <h4>אקדח סיכות</h4>
-                    <img src="https://m.media-amazon.com/images/I/81sHPAuSHeL._AC_SX679_.jpg" alt="אקדח סיכות" />
-                    <p>מחיר: 75₪</p>
+
+                <div class="brands brand-bosch">
+                    <h3>BOSCH</h3>
+                    <div class="product" onclick="openProduct('https://example.com/bosch1')">
+                        <h4>דגם 1 BOSCH</h4>
+                        <img src="https://m.media-amazon.com/images/I/81Ad7+l3gWL._AC_SX679_.jpg" alt="מוצר בוש" />
+                        <p>מותג אמין עם פתרונות מתקדמים.</p>
+                    </div>
+                    <div class="product" onclick="openProduct('https://example.com/bosch2')">
+                        <h4>דגם 2 BOSCH</h4>
+                        <img src="https://m.media-amazon.com/images/I/81Ad7+l3gWL._AC_SX679_.jpg" alt="מוצר בוש" />
+                        <p>מוצר נוסף איכותי מבית בוש.</p>
+                    </div>
                 </div>
             </section>
 
             <section id="about">
                 <h2>אודות החנות</h2>
-                <p>פיצו מציעה מוצרים באיכות גבוהה עם שירות לקוחות מעולה. אנו מחויבים לספק לכם את הכלים הנכונים למחיר הנכון.</p>
+                <p>החנות שלנו נוסדה עם מטרה אחת: להעניק ללקוחותינו מוצרים איכותיים במחירים נוחים. אנו מאמינים בשירות לקוחות מצוין ועלינו להרגיש כאילו אנחנו מתאימים אישית לכל לקוח.</p>
             </section>
 
             <section id="contact" class="contact-info">
                 <h2>פרטי יצירת קשר</h2>
-                <p>טלפון: <strong>050-5599069</strong></p>
+                <p>מספר טלפון: <strong>050-5599069</strong></p>
+                <p>יש לשלוח הודעות בוואצאפ ל: <strong>050-5599069</strong></p>
                 <p>אימייל: <strong>example@mail.com</strong></p>
             </section>
         </main>
 
         <footer>
-            <p>© 2023 פיצו - חנות כלי עבודה</p>
+            <p>© 2023 פיצו לגן ולקבלן וחנות כלי עבודה</p>
         </footer>
     </div>
+
+    <script>
+        function openProduct(url) {
+            window.open(url, '_blank'); // פותח חלון חדש
+        }
+    </script>
 </body>
 </html>
