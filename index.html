@@ -64,6 +64,18 @@
             background: #FF8A65; /* צבע כפתור בהונאה */
         }
 
+        #search {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        #search input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
         #products {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -94,6 +106,11 @@
             text-align: center;
             padding: 10px 0;
         }
+
+        .contact-info {
+            margin: 20px 0;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -111,6 +128,10 @@
         </header>
         
         <main>
+            <section id="search">
+                <input type="text" placeholder="חיפוש מוצרים...">
+            </section>
+
             <section id="home" class="hero">
                 <div class="hero-content">
                     <h2>החנות שלנו</h2>
@@ -182,6 +203,13 @@
             <section id="about">
                 <h2>אודות החנות</h2>
                 <p>החנות שלנו נוסדה עם מטרה אחת: להעניק ללקוחותינו מוצרים איכותיים במחירים נוחים. אנו מאמינים בשירות לקוחות מצוין ועלינו להרגיש כאילו אנחנו מתאימים אישית לכל לקוח.</p>
+            </section>
+
+            <section id="contact" class="contact-info">
+                <h2>פרטי יצירת קשר</h2>
+                <p>מספר טלפון: <strong>050-5599069</strong></p>
+                <p>יש לשלוח הודעות בוואצאפ ל: <strong>050-5599069</strong></p>
+                <p>אימייל: <strong>example@mail.com</strong></p>
             </section>
         </main>
 
