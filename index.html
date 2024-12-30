@@ -8,6 +8,8 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
         }
         header {
             background-color: #333;
@@ -15,33 +17,58 @@
             padding: 20px;
             text-align: center;
         }
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
         .product {
-            display: inline-block;
+            background-color: white;
             width: 30%;
             margin: 10px;
-            background-color: white;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .product:hover {
+            transform: scale(1.05);
         }
         .product img {
             width: 100%;
+            border-radius: 5px;
         }
         .product h3 {
             color: #333;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .product p {
+            color: #555;
+            font-size: 1em;
+            margin: 5px 0;
         }
         .product button {
-            background-color: #007bff;
+            background-color: #28a745;
             color: white;
             border: none;
-            padding: 10px;
+            padding: 12px 20px;
+            font-size: 16px;
             cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .product button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
         }
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 10px;
-            position: absolute;
+            position: fixed;
             bottom: 0;
             width: 100%;
         }
@@ -62,6 +89,27 @@
             max-width: 400px;
             margin: auto;
             border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .cart-modal-content h3 {
+            margin-top: 0;
+        }
+        .cart-modal-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .cart-modal-content li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .cart-modal-content button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
         }
     </style>
 </head>
