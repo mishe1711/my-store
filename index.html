@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>חנות כלי עבודה ופיצו לגן ולקבלן</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- קישור לאייקונים -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,17 +14,17 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* יישור למרכז */
-            background-color: #f1f1f1; /* צבע רקע שנשאר אחיד לשני החלקים */
+            justify-content: center; 
+            background-color: #f1f1f1; 
         }
 
         #container {
-            max-width: 1200px; /* הגבלת רוחב האתר */
+            max-width: 1200px; 
             width: 100%;
         }
 
         header {
-            background: #3F51B5; /* צבע רקע כהה */
+            background: #3F51B5; 
             color: white;
             padding: 10px 0;
             text-align: center;
@@ -46,13 +46,13 @@
         }
 
         .hero {
-            background: #EDE7F6; /* צבע בהיר */
+            background: #EDE7F6; 
             padding: 20px 0;
             text-align: center;
         }
 
         .btn {
-            background: #FF5722; /* צבע כפתור */
+            background: #FF5722; 
             color: white;
             padding: 10px 20px;
             border: none;
@@ -61,7 +61,7 @@
         }
 
         .btn:hover {
-            background: #FF8A65; /* צבע כפתור בהונאה */
+            background: #FF8A65; 
         }
 
         #search {
@@ -79,31 +79,24 @@
         #products {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px; /* רווח בין הכרטיסים */
+            gap: 15px; 
             padding: 20px; 
         }
 
         .product {
+            background-color: #FFFFFF; /* צבע רקע חלונית */
             border: 1px solid #DDD;
             border-radius: 5px;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
+            height: 150px; /* גובה קבוע לחלוניות */
             transition: transform 0.3s;
-            cursor: pointer; /* מצביע של עכבר */
+            cursor: pointer; 
         }
 
         .product:hover {
-            transform: scale(1.05); /* אפקט צמיחה בהונאה */
+            transform: scale(1.05); /* אפקט צמיחה */
         }
-
-        /* צבעים עבור כל מותג */
-        .brand-dewalt { background-color: #FFD700; }
-        .brand-makita { background-color: #009688; }
-        .brand-milwaukee { background-color: #D00000; } /* צבע מותג מילוקי */
-        .brand-bosch { background-color: #4CAF50; }
-        .brand-hikoki { background-color: #FF5722; } /* צבע מותג היקוקי */
-        .brand-kress { background-color: #F0F0F0; } /* צבע מותג קרס */
-        .brand-rex { background-color: #616161; } /* צבע מותג ורקס */
 
         footer {
             text-align: center;
@@ -128,18 +121,6 @@
                     <li><a href="#contact">יצירת קשר</a></li>
                 </ul>
             </nav>
-            <nav>
-                <ul>
-                    <li><a href="#tools">כלי עבודה נטענים</a></li>
-                    <li><a href="#electric-tools">כלים חשמליים</a></li>
-                    <li><a href="#saws">מסורים</a></li>
-                    <li><a href="#accessories">אביזרים נילווים לכלי עבודה</a></li>
-                    <li><a href="#construction">ציוד לבנין ולעשייה</a></li>
-                    <li><a href="#technical-equipment">ציוד טכני</a></li>
-                    <li><a href="#home-garden">לבית ולגן</a></li>
-                    <li><a href="#movers-tools">כלים למובלה</a></li>
-                </ul>
-            </nav>
         </header>
         
         <main>
@@ -157,90 +138,43 @@
 
             <section id="products">
                 <h2>מוצרים</h2>
-                
-                <div class="brands brand-dewalt">
-                    <h3>DEWALT</h3>
-                    <div class="product" onclick="openProduct('https://example.com/dewalt1')">
-                        <h4>דגם 1 DEWALT</h4>
-                        <img src="https://m.media-amazon.com/images/I/61FJTP4X7TL._AC_SX679_.jpg" alt="מוצר דיוולט" />
-                        <p>מוצר מדהים שמחזיק לאורך זמן.</p>
-                    </div>
-                    <div class="product" onclick="openProduct('https://example.com/dewalt2')">
-                        <h4>דגם 2 DEWALT</h4>
-                        <img src="https://m.media-amazon.com/images/I/61FJTP4X7TL._AC_SX679_.jpg" alt="מוצר דיוולט" />
-                        <p>מוצר נוסף מדהים.</p>
-                    </div>
-                </div>
 
-                <div class="brands brand-makita">
-                    <h3>Makita</h3>
-                    <div class="product" onclick="openProduct('https://example.com/makita1')">
-                        <h4>דגם 1 Makita</h4>
-                        <img src="https://m.media-amazon.com/images/I/61MLCCVf9pL._AC_SX679_.jpg" alt="מוצר מקיטה" />
-                        <p>מוצר איכותי שמציע פתרונות אמינים.</p>
-                    </div>
-                    <div class="product" onclick="openProduct('https://example.com/makita2')">
-                        <h4>דגם 2 Makita</h4>
-                        <img src="https://m.media-amazon.com/images/I/61MLCCVf9pL._AC_SX679_.jpg" alt="מוצר מקיטה" />
-                        <p>מוצר נוסף מדהים מקיטה.</p>
-                    </div>
+                <div class="product">
+                    <h4>דגם 1 DEWALT</h4>
+                    <p>מוצר מדהים שמחזיק לאורך זמן.</p>
                 </div>
-
-                <div class="brands brand-milwaukee">
-                    <h3>MILWAUKEE</h3>
-                    <div class="product" onclick="openProduct('https://example.com/milwaukee1')">
-                        <h4>דגם 1 MILWAUKEE</h4>
-                        <img src="https://m.media-amazon.com/images/I/81sHPAuSHeL._AC_SX679_.jpg" alt="מוצר מילוקי" />
-                        <p>מוצר חזק ומהיר במיוחד.</p>
-                    </div>
-                    <div class="product" onclick="openProduct('https://example.com/milwaukee2')">
-                        <h4>דגם 2 MILWAUKEE</h4>
-                        <img src="https://m.media-amazon.com/images/I/81sHPAuSHeL._AC_SX679_.jpg" alt="מוצר מילוקי" />
-                        <p>כלי עבודה מתקדמים.</p>
-                    </div>
+                <div class="product">
+                    <h4>דגם 2 DEWALT</h4>
+                    <p>מוצר נוסף מדהים.</p>
                 </div>
-
-                <div class="brands brand-bosch">
-                    <h3>BOSCH</h3>
-                    <div class="product" onclick="openProduct('https://example.com/bosch1')">
-                        <h4>דגם 1 BOSCH</h4>
-                        <img src="https://m.media-amazon.com/images/I/81Ad7+l3gWL._AC_SX679_.jpg" alt="מוצר בוש" />
-                        <p>מותג אמין עם פתרונות מתקדמים.</p>
-                    </div>
-                    <div class="product" onclick="openProduct('https://example.com/bosch2')">
-                        <h4>דגם 2 BOSCH</h4>
-                        <img src="https://m.media-amazon.com/images/I/81Ad7+l3gWL._AC_SX679_.jpg" alt="מוצר בוש" />
-                        <p>מוצר נוסף איכותי מבית בוש.</p>
-                    </div>
+                <div class="product">
+                    <h4>דגם 1 Makita</h4>
+                    <p>מוצר איכותי שמציע פתרונות אמינים.</p>
                 </div>
-
-                <div class="brands brand-hikoki">
-                    <h3>HIKOKI</h3>
-                    <div class="product" onclick="openProduct('https://example.com/hikoki1')">
-                        <h4>דגם 1 HIKOKI</h4>
-                        <img src="https://example.com/hikoki1.jpg" alt="מוצר היקוקי" />
-                        <p>תוצר מדהים מבית היקוקי.</p>
-                    </div>
+                <div class="product">
+                    <h4>דגם 2 Makita</h4>
+                    <p>מוצר נוסף מדהים מקיטה.</p>
                 </div>
-
-                <div class="brands brand-kress">
-                    <h3>KRESS</h3>
-                    <div class="product" onclick="openProduct('https://example.com/kress1')">
-                        <h4>דגם 1 KRESS</h4>
-                        <img src="https://example.com/kress1.jpg" alt="מוצר קרס" />
-                        <p>איכות גבוהה לכל הבנאים.</p>
-                    </div>
+                <div class="product">
+                    <h4>דגם 1 MILWAUKEE</h4>
+                    <p>תוצר חזק ומהיר במיוחד.</p>
                 </div>
-
-                <div class="brands brand-rex">
-                    <h3>REX</h3>
-                    <div class="product" onclick="openProduct('https://example.com/rex1')">
-                        <h4>דגם 1 REX</h4>
-                        <img src="https://example.com/rex1.jpg" alt="מוצר ורקס" />
-                        <p>כלים איכותיים לכל עבודה.</p>
-                    </div>
+                <div class="product">
+                    <h4>דגם 2 BOSCH</h4>
+                    <p>מותג אמין עם פתרונות מתקדמים.</p>
                 </div>
-
+                <div class="product">
+                    <h4>דגם 1 HIKOKI</h4>
+                    <p>תוצר מדהים מבית היקוקי.</p>
+                </div>
+                <div class="product">
+                    <h4>דגם 1 KRESS</h4>
+                    <p>איכות גבוהה לכל הבנאים.</p>
+                </div>
+                <div class="product">
+                    <h4>דגם 1 REX</h4>
+                    <p>כלים איכותיים לכל עבודה.</p>
+                </div>
             </section>
 
             <section id="about">
