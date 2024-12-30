@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>פיצו המרכז לגן ולקרבן</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- קישור לאייקונים -->
+    <title>חנות כלי עבודה ופיצו לגן ולקבלן</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,14 +14,14 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center; 
+            justify-content: center;
             background-color: #f1f1f1; 
         }
 
         #container {
             max-width: 1200px; 
-            width: 100%;
             margin: auto;
+            width: 100%;
         }
 
         header {
@@ -46,6 +46,10 @@
             text-decoration: none;
         }
 
+        nav a.active {
+            border-bottom: 2px solid white; /* סגנון לקישור פעיל */
+        }
+
         .hero {
             background: #EDE7F6; 
             padding: 20px 0;
@@ -59,7 +63,6 @@
             border: none;
             cursor: pointer;
             text-decoration: none;
-            margin-bottom: 15px;
         }
 
         .btn:hover {
@@ -78,25 +81,30 @@
             border-radius: 5px;
         }
 
-        #brands {
+        #products {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px; 
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px; 
             padding: 20px; 
         }
 
-        .brand {
+        .product {
             border: 1px solid #DDD;
             border-radius: 5px;
             padding: 15px;
             text-align: center;
-            cursor: pointer;
             transition: transform 0.3s;
+            cursor: pointer; 
         }
 
-        .brand:hover {
+        .product:hover {
             transform: scale(1.05); 
         }
+
+        .brand-dewalt { background-color: #FFD700; }
+        .brand-makita { background-color: #009688; }
+        .brand-husqvarna { background-color: #FF5722; }
+        .brand-bosch { background-color: #4CAF50; }
 
         footer {
             text-align: center;
@@ -108,35 +116,30 @@
             text-align: center;
         }
 
-        .cart {
-            position: fixed;
-            right: 20px;
-            top: 20px;
-            background: #ffffff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 15px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            display: none; 
+        .promo-banner {
+            background-color: #FF5722; /* צבע הבאנר */
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin: 20px 0;
         }
 
-        .cart-item {
-            margin: 5px 0;
-        }
-
-        .total {
-            margin-top: 10px;
-            font-weight: bold;
+        /* מדיה קוורסים */
+        @media only screen and (max-width: 768px) {
+            nav ul {
+                flex-direction: column; 
+                align-items: center; /* מרכז את הקישורים */
+            }
         }
     </style>
 </head>
 <body>
     <div id="container">
         <header>
-            <h1>ברוכים הבאים לפיצו המרכז לגן ולקרבן!</h1>
+            <h1>ברוכים הבאים לפיצו לגן ולקבלן!</h1>
             <nav>
                 <ul>
-                    <li><a href="#home">בית</a></li>
+                    <li><a href="#home" class="active">בית</a></li>
                     <li><a href="#products">מוצרים</a></li>
                     <li><a href="#about">אודות</a></li>
                     <li><a href="#contact">יצירת קשר</a></li>
@@ -145,6 +148,10 @@
         </header>
         
         <main>
+            <div class="promo-banner">
+                <p>מבצע מיוחד! 20% הנחה על כל המוצרים החדשים!</p>
+            </div>
+
             <section id="search">
                 <input type="text" placeholder="חיפוש מוצרים...">
             </section>
@@ -153,90 +160,66 @@
                 <div class="hero-content">
                     <h2>החנות שלנו</h2>
                     <p>ברוכים הבאים לחנות שלנו, היעד האולטימטיבי למוצרים איכותיים במחירים נהדרים!</p>
+                    <a href="#products" class="btn">לראות מוצרים</a>
                 </div>
             </section>
 
-            <section id="brands">
-                <h2>מותגים</h2>
-                <div class="brand" onclick="toggleProducts('makita')" style="background-color: #4DB6AC;">
-                    <h3>מקיטה</h3>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Makita_logo.svg/1200px-Makita_logo.svg.png" alt="מקיטה" style="width: 100px;">
-                </div>
-                <div class="brand" onclick="toggleProducts('dewalt')" style="background-color: #FDD835;">
-                    <h3>דיוולט</h3>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/DeWalt_logo.svg/1200px-DeWalt_logo.svg.png" alt="דיוולט" style="width: 100px;">
-                </div>
-                <div class="brand" onclick="toggleProducts('bosch')" style="background-color: #0072B8;">
-                    <h3>בוש</h3>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Bosch_logo.svg/2560px-Bosch_logo.svg.png" alt="בוש" style="width: 100px;">
-                </div>
-                <div class="brand" onclick="toggleProducts('husqvarna')" style="background-color: #FF6F20;">
-                    <h3>אוסקוורנה</h3>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Husqvarna_logo.svg/2560px-Husqvarna_logo.svg.png" alt="אוסקוורנה" style="width: 100px;">
-                </div>
-            </section>
-
-            <section id="product-list" style="display: none;">
+            <section id="products">
                 <h2>מוצרים</h2>
                 
-                <div id="makita-products" class="products" style="display: none;">
-                    <h3>מקיטה</h3>
-                    <div class="product" onclick="addToCart('Makita דגם 1', 120)">
-                        <h4>דגם 1 Makita - 120 ש"ח</h4>
-                        <img src="https://m.media-amazon.com/images/I/61MLCCVf9pL._AC_SX679_.jpg" alt="מוצר מקיטה" />
-                        <p>מוצר איכותי שמציע פתרונות אמינים.</p>
-                    </div>
-                    <div class="product" onclick="addToCart('Makita דגם 2', 180)">
-                        <h4>דגם 2 Makita - 180 ש"ח</h4>
-                        <img src="https://m.media-amazon.com/images/I/61MLCCVf9pL._AC_SX679_.jpg" alt="מוצר מקיטה" />
-                        <p>מוצר נוסף מדהים מקיטה.</p>
-                    </div>
-                    <div class="product" onclick="addToCart('Makita דגם 3', 130)">
-                        <h4>דגם 3 Makita - 130 ש"ח</h4>
-                        <img src="https://m.media-amazon.com/images/I/61MLCCVf9pL._AC_SX679_.jpg" alt="מוצר מקיטה" />
-                        <p>פתרון עבודה מצוין עם עמידות גבוהה.</p>
-                    </div>
-                </div>
-
-                <div id="dewalt-products" class="products" style="display: none;">
-                    <h3>דיוולט</h3>
-                    <div class="product" onclick="addToCart('DEWALT דגם 1', 100)">
-                        <h4>דגם 1 DEWALT - 100 ש"ח</h4>
+                <div class="brands brand-dewalt">
+                    <h3>DEWALT</h3>
+                    <div class="product" onclick="openProduct('https://example.com/dewalt1')">
+                        <h4>דגם 1 DEWALT</h4>
                         <img src="https://m.media-amazon.com/images/I/61FJTP4X7TL._AC_SX679_.jpg" alt="מוצר דיוולט" />
                         <p>מוצר מדהים שמחזיק לאורך זמן.</p>
                     </div>
-                    <div class="product" onclick="addToCart('DEWALT דגם 2', 200)">
-                        <h4>דגם 2 DEWALT - 200 ש"ח</h4>
+                    <div class="product" onclick="openProduct('https://example.com/dewalt2')">
+                        <h4>דגם 2 DEWALT</h4>
                         <img src="https://m.media-amazon.com/images/I/61FJTP4X7TL._AC_SX679_.jpg" alt="מוצר דיוולט" />
                         <p>מוצר נוסף מדהים.</p>
                     </div>
                 </div>
 
-                <div id="bosch-products" class="products" style="display: none;">
-                    <h3>בוש</h3>
-                    <div class="product" onclick="addToCart('BOSCH דגם 1', 230)">
-                        <h4>דגם 1 BOSCH - 230 ש"ח</h4>
-                        <img src="https://m.media-amazon.com/images/I/81Ad7+l3gWL._AC_SX679_.jpg" alt="מוצר בוש" />
-                        <p>מותג אמין עם פתרונות מתקדמים.</p>
+                <div class="brands brand-makita">
+                    <h3>Makita</h3>
+                    <div class="product" onclick="openProduct('https://example.com/makita1')">
+                        <h4>דגם 1 Makita</h4>
+                        <img src="https://m.media-amazon.com/images/I/61MLCCVf9pL._AC_SX679_.jpg" alt="מוצר מקיטה" />
+                        <p>מוצר איכותי שמציע פתרונות אמינים.</p>
                     </div>
-                    <div class="product" onclick="addToCart('BOSCH דגם 2', 280)">
-                        <h4>דגם 2 BOSCH - 280 ש"ח</h4>
-                        <img src="https://m.media-amazon.com/images/I/81Ad7+l3gWL._AC_SX679_.jpg" alt="מוצר בוש" />
-                        <p>מוצר נוסף איכותי מבית בוש.</p>
+                    <div class="product" onclick="openProduct('https://example.com/makita2')">
+                        <h4>דגם 2 Makita</h4>
+                        <img src="https://m.media-amazon.com/images/I/61MLCCVf9pL._AC_SX679_.jpg" alt="מוצר מקיטה" />
+                        <p>מוצר נוסף מדהים מקיטה.</p>
                     </div>
                 </div>
 
-                <div id="husqvarna-products" class="products" style="display: none;">
-                    <h3>אוסקוורנה</h3>
-                    <div class="product" onclick="addToCart('HUSQVARNA דגם 1', 200)">
-                        <h4>דגם 1 HUSQVARNA - 200 ש"ח</h4>
+                <div class="brands brand-husqvarna">
+                    <h3>HUSQVARNA</h3>
+                    <div class="product" onclick="openProduct('https://example.com/husqvarna1')">
+                        <h4>דגם 1 HUSQVARNA</h4>
                         <img src="https://m.media-amazon.com/images/I/71XXdWoSieL._AC_SX679_.jpg" alt="מוצר אוסקוורנה" />
                         <p>הפתרון המושלם לכל אחד.</p>
                     </div>
-                    <div class="product" onclick="addToCart('HUSQVARNA דגם 2', 250)">
-                        <h4>דגם 2 HUSQVARNA - 250 ש"ח</h4>
+                    <div class="product" onclick="openProduct('https://example.com/husqvarna2')">
+                        <h4>דגם 2 HUSQVARNA</h4>
                         <img src="https://m.media-amazon.com/images/I/71XXdWoSieL._AC_SX679_.jpg" alt="מוצר אוסקוורנה" />
                         <p>מוצר נוסף מדהים אוסקוורנה.</p>
+                    </div>
+                </div>
+
+                <div class="brands brand-bosch">
+                    <h3>BOSCH</h3>
+                    <div class="product" onclick="openProduct('https://example.com/bosch1')">
+                        <h4>דגם 1 BOSCH</h4>
+                        <img src="https://m.media-amazon.com/images/I/81Ad7+l3gWL._AC_SX679_.jpg" alt="מוצר בוש" />
+                        <p>מותג אמין עם פתרונות מתקדמים.</p>
+                    </div>
+                    <div class="product" onclick="openProduct('https://example.com/bosch2')">
+                        <h4>דגם 2 BOSCH</h4>
+                        <img src="https://m.media-amazon.com/images/I/81Ad7+l3gWL._AC_SX679_.jpg" alt="מוצר בוש" />
+                        <p>מוצר נוסף איכותי מבית בוש.</p>
                     </div>
                 </div>
             </section>
@@ -255,62 +238,13 @@
         </main>
 
         <footer>
-            <p>© 2023 פיצו המרכז לגן ולקרבן וחנות כלי עבודה</p>
+            <p>© 2023 פיצו לגן ולקבלן וחנות כלי עבודה</p>
         </footer>
-
-        <div class="cart" id="cart">
-            <h2>עגלה</h2>
-            <div id="cart-items"></div>
-            <div class="total" id="total"></div>
-            <button onclick="checkout()" class="btn">לבדוק את התשלום</button>
-        </div>
     </div>
 
     <script>
-        let cart = [];
-
-        function toggleProducts(brand) {
-            const productList = document.getElementById('product-list');
-            const makitaProducts = document.getElementById('makita-products');
-            const dewaltProducts = document.getElementById('dewalt-products');
-            const boschProducts = document.getElementById('bosch-products');
-            const husqvarnaProducts = document.getElementById('husqvarna-products');
-
-            productList.style.display = 'block';
-
-            makitaProducts.style.display = (brand === 'makita') ? 'block' : 'none';
-            dewaltProducts.style.display = (brand === 'dewalt') ? 'block' : 'none';
-            boschProducts.style.display = (brand === 'bosch') ? 'block' : 'none';
-            husqvarnaProducts.style.display = (brand === 'husqvarna') ? 'block' : 'none';
-        }
-
-        function addToCart(itemName, price) {
-            cart.push({ name: itemName, price: price });
-            updateCart();
-        }
-
-        function updateCart() {
-            const cartItems = document.getElementById('cart-items');
-            const totalDisplay = document.getElementById('total');
-            cartItems.innerHTML = '';
-            let total = 0;
-
-            cart.forEach(item => {
-                const div = document.createElement('div');
-                div.className = 'cart-item';
-                div.innerText = `${item.name} - ${item.price} ש"ח`;
-                cartItems.appendChild(div);
-                total += item.price;
-            });
-
-            totalDisplay.innerText = `סך הכל: ${total} ש"ח`;
-            document.getElementById('cart').style.display = 'block'; 
-        }
-
-        function checkout() {
-            alert("תודה על רכישתך!"); 
-            cart = []; 
-            updateCart(); 
+        function openProduct(url) {
+            window.open(url, '_blank'); // פותח חלון חדש
         }
     </script>
 </body>
