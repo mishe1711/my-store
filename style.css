@@ -1,24 +1,20 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    background-color: #008080;
+    background: #3F51B5; /* צבע רקע כהה */
     color: white;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
 nav ul {
+    list-style: none;
     padding: 0;
-    list-style-type: none;
 }
 
 nav ul li {
@@ -26,97 +22,68 @@ nav ul li {
     margin: 0 15px;
 }
 
-.hero {
-    background-image: url('https://example.com/path/to/grass-background.jpg'); /* החלף ב-URL של תמונת רקע */
-    background-size: cover;
+nav a {
     color: white;
-    text-align: center;
-    padding: 100px 20px;
+    text-decoration: none;
 }
 
-.hero-content {
-    background: rgba(0, 0, 0, 0.5); /* רקע שקוף לכותרת */
-    padding: 20px;
-    border-radius: 10px;
+.hero {
+    background: #EDE7F6; /* צבע בהיר */
+    padding: 20px 0;
+    text-align: center;
 }
 
 .btn {
-    background-color: #ff9800; /* צבע הכפתור */
+    background: #FF5722; /* צבע כפתור */
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    text-decoration: none; /* אין קו תחתון */
+    text-decoration: none;
 }
 
 .btn:hover {
-    background-color: #e68900; /* צבע כאשר מעבירים על הכפתור */
+    background: #FF8A65; /* צבע כפתור בהונאה */
 }
 
-main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.brands {
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    padding: 10px;
-}
-
-.brand {
-    margin: 10px 0;
+#products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px; /* רווח בין הכרטיסים */
+    padding: 20px; 
 }
 
 .product {
-    margin: 10px 0;
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
-}
-
-.product img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-footer {
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    padding: 15px;
     text-align: center;
-    padding: 15px 0;
-    background-color: #008080;
-    color: white;
-    width: 100%;
+    transition: transform 0.3s;
 }
 
-/* Modal styles */
+.product:hover {
+    transform: scale(1.05); /* אפקט צמיחה בהונאה */
+}
+
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
 }
 
 .close {
