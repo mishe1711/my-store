@@ -53,9 +53,18 @@
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: absolute;
+            position: relative;
             width: 100%;
             bottom: 0;
+        }
+        .cart {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -65,26 +74,53 @@
     <h1>ברוך הבא לחנות כלים חשמליים</h1>
 </header>
 
+<div class="cart">
+    <h4>עגלה</h4>
+    <ul id="cart-items"></ul>
+    <p id="total-price">סכום כולל: ₪0</p>
+</div>
+
 <div class="products-container">
     <div class="product">
-        <img src="https://via.placeholder.com/300" alt="מקדח חשמלי">
+        <img src="https://via.placeholder.com/300" alt="מקדח חשמלי Makita">
         <h3>מקדח חשמלי Makita</h3>
         <p>מחיר: ₪350</p>
         <button onclick="addToCart('מקדח חשמלי Makita', 350)">הוסף לעגלה</button>
     </div>
 
     <div class="product">
-        <img src="https://via.placeholder.com/300" alt="מברגת אימפקט">
+        <img src="https://via.placeholder.com/300" alt="מברגת אימפקט Milwaukee">
         <h3>מברגת אימפקט Milwaukee</h3>
         <p>מחיר: ₪450</p>
         <button onclick="addToCart('מברגת אימפקט Milwaukee', 450)">הוסף לעגלה</button>
     </div>
 
     <div class="product">
-        <img src="https://via.placeholder.com/300" alt="מקצועי דווולט">
+        <img src="https://via.placeholder.com/300" alt="מקדחה דווולט מקצועית">
         <h3>מקדחה דווולט מקצועית</h3>
         <p>מחיר: ₪499</p>
         <button onclick="addToCart('מקדחה דווולט מקצועית', 499)">הוסף לעגלה</button>
+    </div>
+
+    <div class="product">
+        <img src="https://via.placeholder.com/300" alt="מכונת מלטשת מטבו">
+        <h3>מכונת מלטשת מטבו</h3>
+        <p>מחיר: ₪350</p>
+        <button onclick="addToCart('מכונת מלטשת מטבו', 350)">הוסף לעגלה</button>
+    </div>
+
+    <div class="product">
+        <img src="https://via.placeholder.com/300" alt="מקדחה וורקס">
+        <h3>מקדחה וורקס</h3>
+        <p>מחיר: ₪480</p>
+        <button onclick="addToCart('מקדחה וורקס', 480)">הוסף לעגלה</button>
+    </div>
+
+    <div class="product">
+        <img src="https://via.placeholder.com/300" alt="מסור בוש מקצועי">
+        <h3>מסור בוש מקצועי</h3>
+        <p>מחיר: ₪620</p>
+        <button onclick="addToCart('מסור בוש מקצועי', 620)">הוסף לעגלה</button>
     </div>
 </div>
 
@@ -99,8 +135,26 @@
         const product = { name: productName, price: productPrice };
         cart.push(product);
         alert(productName + ' נוסף לעגלה!');
-        console.log('עגלת קניות:', cart);
+        updateCartDisplay();
+    }
+
+    function updateCartDisplay() {
+        const cartItemsElement = document.getElementById("cart-items");
+        const totalPriceElement = document.getElementById("total-price");
+
+        cartItemsElement.innerHTML = '';
+        let totalPrice = 0;
+
+        cart.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = `${item.name} - ₪${item.price}`;
+            cartItemsElement.appendChild(li);
+            totalPrice += item.price;
+        });
+
+        totalPriceElement.textContent = `סכום כולל: ₪${totalPrice}`;
     }
 </script>
 
 </body>
+</html>
