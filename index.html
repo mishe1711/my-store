@@ -84,15 +84,23 @@
         }
 
         .product {
-            background-color: #FFFFFF; /* צבע רקע חלונית */
             border: 1px solid #DDD;
             border-radius: 5px;
-            padding: 20px;
+            padding: 15px;
             text-align: center;
-            height: 150px; /* גובה קבוע לחלוניות */
             transition: transform 0.3s;
             cursor: pointer; 
+            height: 150px; /* גובה קבוע לחלוניות */
         }
+
+        /* צבעי רקע מותאמים לכל מותג */
+        .brand-dewalt { background-color: #FFD700; } /* דיוולט */
+        .brand-makita { background-color: #009688; } /* מקיטה */
+        .brand-milwaukee { background-color: #D00000; } /* מילוקי */
+        .brand-bosch { background-color: #4CAF50; } /* בוש */
+        .brand-hikoki { background-color: #FF5722; } /* היקוקי */
+        .brand-kress { background-color: #F0F0F0; } /* קרס */
+        .brand-rex { background-color: #616161; } /* ורקס */
 
         .product:hover {
             transform: scale(1.05); /* אפקט צמיחה */
@@ -139,47 +147,47 @@
             <section id="products">
                 <h2>מוצרים</h2>
 
-                <div class="product">
-                    <h4>דגם 1 DEWALT</h4>
+                <div class="product brand-dewalt">
+                    <h4>DEWALT</h4>
                     <p>מוצר מדהים שמחזיק לאורך זמן.</p>
                 </div>
-                <div class="product">
-                    <h4>דגם 2 DEWALT</h4>
+                <div class="product brand-dewalt">
+                    <h4>  DEWALT</h4>
                     <p>מוצר נוסף מדהים.</p>
                 </div>
-                <div class="product">
-                    <h4>דגם 1 Makita</h4>
+                <div class="product brand-makita">
+                    <h4> Makita</h4>
                     <p>מוצר איכותי שמציע פתרונות אמינים.</p>
                 </div>
-                <div class="product">
-                    <h4>דגם 2 Makita</h4>
+                <div class="product brand-makita">
+                    <h4> Makita</h4>
                     <p>מוצר נוסף מדהים מקיטה.</p>
                 </div>
-                <div class="product">
-                    <h4>דגם 1 MILWAUKEE</h4>
+                <div class="product brand-milwaukee">
+                    <h4> MILWAUKEE</h4>
                     <p>תוצר חזק ומהיר במיוחד.</p>
                 </div>
-                <div class="product">
-                    <h4>דגם 2 BOSCH</h4>
+                <div class="product brand-bosch">
+                    <h4> BOSCH</h4>
                     <p>מותג אמין עם פתרונות מתקדמים.</p>
                 </div>
-                <div class="product">
-                    <h4>דגם 1 HIKOKI</h4>
+                <div class="product brand-hikoki">
+                    <h4>  HIKOKI</h4>
                     <p>תוצר מדהים מבית היקוקי.</p>
                 </div>
-                <div class="product">
-                    <h4>דגם 1 KRESS</h4>
+                <div class="product brand-kress">
+                    <h4> KRESS</h4>
                     <p>איכות גבוהה לכל הבנאים.</p>
                 </div>
-                <div class="product">
-                    <h4>דגם 1 REX</h4>
+                <div class="product brand-rex">
+                    <h4>worx</h4>
                     <p>כלים איכותיים לכל עבודה.</p>
                 </div>
             </section>
 
             <section id="about">
                 <h2>אודות החנות</h2>
-                <p>החנות שלנו נוסדה עם מטרה אחת: להעניק ללקוחותינו מוצרים איכותיים במחירים נוחים. אנו מאמינים בשירות לקוחות מצוין ועלינו להרגיש כאילו אנחנו מתאימים אישית לכל לקוח.</p>
+                <p>החנות שלנו נוסדה עם מטרה אחת: להעניק ללקוחותינו מוצרים איכותיים במחירים נוחים. אנו מאמינים בשירות לקוחות מצוין.</p>
             </section>
 
             <section id="contact" class="contact-info">
