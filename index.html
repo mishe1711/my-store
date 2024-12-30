@@ -7,6 +7,9 @@
     <title>פיצו לגן ולקבלן</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -72,6 +75,12 @@
             padding: 20px;
         }
 
+        .brands {
+            padding: 10px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
         .product {
             border: 1px solid #DDD;
             border-radius: 5px;
@@ -114,7 +123,7 @@
             <section id="home" class="hero">
                 <div class="hero-content">
                     <h2>החנות שלנו</h2>
-                    <p>ברוכים הבאים לחנות שלנו, היעד האולטימטיבי למוצרים איכותיים במחירים נהדרים!</p>
+                    <p>ברוכים הבאים לחנות שלנו, היעד האולטימטיבי למוצרים איכותיים במחירים נהדרים! מהייבוא לצרכן!</p>
                     <a href="#products" class="btn">לראות מוצרים</a>
                 </div>
             </section>
@@ -122,59 +131,59 @@
             <section id="products">
                 <h2>מוצרים</h2>
                 
-                <div class="brands brand-dewalt">
+                <div class="brands brand-dewalt" style="background-color: #FFD700;">
                     <h3>DEWALT</h3>
-                    <div class="product" onclick="window.location.href='devalt.html'">
-                        <h4>דגם 1DEWALT</h4>
-                        <img src="https://m.media-amazon.com/images/I/61FJTP4X7TL._AC_SX679_.jpg" alt="מוצר דיוולט" />
-                        <p>מוצר מדהים שמחזיק לאורך זמן.</p>
+                    <div class="product" onclick="openProduct('https://example.com/dewalt1')">
+                        <h4>דגם DCD771</h4>
+                        <img src="https://m.media-amazon.com/images/I/71j5W5puLWL._AC_SX679_.jpg" alt="מוצר דיוולט" />
+                        <p>מוצר מדהים שמחזיק לאורך זמן. מחיר: ₪300</p>
                     </div>
-                    <div class="product" onclick="window.location.href='devalt.html'">
-                        <h4>דגם 2DEWALT</h4>
-                        <img src="https://m.media-amazon.com/images/I/61FJTP4X7TL._AC_SX679_.jpg" alt="מוצר דיוולט" />
-                        <p>מוצר נוסף מדהים.</p>
+                    <div class="product" onclick="openProduct('https://example.com/dewalt2')">
+                        <h4>דגם DCD996</h4>
+                        <img src="https://m.media-amazon.com/images/I/71Pi2ZyDloL._AC_SX679_.jpg" alt="מוצר דיוולט" />
+                        <p>מקדחת פטיש איכותית. מחיר: ₪450</p>
                     </div>
                 </div>
 
-                <div class="brands brand-makita">
+                <div class="brands brand-makita" style="background-color: #009688;">
                     <h3>Makita</h3>
-                    <div class="product" onclick="window.location.href='makita.html'">
-                        <h4>דגם 1Makita</h4>
-                        <img src="https://m.media-amazon.com/images/I/61MLCCVf9pL._AC_SX679_.jpg" alt="מוצר מקיטה" />
-                        <p>מוצר איכותי שמציע פתרונות אמינים.</p>
+                    <div class="product" onclick="openProduct('https://example.com/makita1')">
+                        <h4>דגם DHP481</h4>
+                        <img src="https://m.media-amazon.com/images/I/71CS5TQWqCL._AC_SX679_.jpg" alt="מוצר מקיטה" />
+                        <p>מקדחת פטיש עם טכנולוגיית חוטי-מחשבים. מחיר: ₪350</p>
                     </div>
-                    <div class="product" onclick="window.location.href='makita.html'">
-                        <h4>דגם 2Makita</h4>
-                        <img src="https://m.media-amazon.com/images/I/61MLCCVf9pL._AC_SX679_.jpg" alt="מוצר מקיטה" />
-                        <p>מוצר נוסף מדהים מקיטה.</p>
+                    <div class="product" onclick="openProduct('https://example.com/makita2')">
+                        <h4>דגם XFD131</h4>
+                        <img src="https://m.media-amazon.com/images/I/91pYamN2fFAL._AC_SX679_.jpg" alt="מוצר מקיטה" />
+                        <p>מקדחה חשמלית נטענת 18V. מחיר: ₪400</p>
                     </div>
                 </div>
 
-                <div class="brands brand-husqvarna">
+                <div class="brands brand-husqvarna" style="background-color: #FF5722;">
                     <h3>HUSQVARNA</h3>
-                    <div class="product" onclick="window.location.href='husqvarna.html'">
-                        <h4>דגם 1HUSQVARNA</h4>
-                        <img src="https://m.media-amazon.com/images/I/71XXdWoSieL._AC_SX679_.jpg" alt="מוצר אוסקוורנה" />
-                        <p>הפתרון המושלם לכל אחד.</p>
+                    <div class="product" onclick="openProduct('https://example.com/husqvarna1')">
+                        <h4>דגם T540XP</h4>
+                        <img src="https://m.media-amazon.com/images/I/81hAsrYw5dL._AC_SX679_.jpg" alt="מוצר אוסקוורנה T540XP" />
+                        <p>מסור שרשרת מקצועי. מחיר: ₪800</p>
                     </div>
-                    <div class="product" onclick="window.location.href='husqvarna.html'">
-                        <h4>דגם 2HUSQVARNA</h4>
-                        <img src="https://m.media-amazon.com/images/I/71XXdWoSieL._AC_SX679_.jpg" alt="מוצר אוסקוורנה" />
-                        <p>מוצר נוסף מדהים אוסקוורנה.</p>
+                    <div class="product" onclick="openProduct('https://example.com/husqvarna2')">
+                        <h4>דגם 450 Rancher</h4>
+                        <img src="https://m.media-amazon.com/images/I/71Mk49IoDUL._AC_SX679_.jpg" alt="מוצר אוסקוורנה 450 Rancher" />
+                        <p>פתרון לקיצוץ עצים. מחיר: ₪750</p>
                     </div>
                 </div>
 
-                <div class="brands brand-bosch">
+                <div class="brands brand-bosch" style="background-color: #4CAF50;">
                     <h3>BOSCH</h3>
-                    <div class="product" onclick="window.location.href='bosch.html'">
-                        <h4>דגם 1BOSCH</h4>
-                        <img src="https://m.media-amazon.com/images/I/81Ad7+l3gWL._AC_SX679_.jpg" alt="מוצר בוש" />
-                        <p>מותג אמין עם פתרונות מתקדמים.</p>
+                    <div class="product" onclick="openProduct('https://example.com/bosch1')">
+                        <h4>דגם GSR18V-190</h4>
+                        <img src="https://m.media-amazon.com/images/I/71CzqCuBOUL._AC_SX679_.jpg" alt="מוצר בוש GSR18V-190" />
+                        <p>מקדחה/פטיש 18 וולט. מחיר: ₪550</p>
                     </div>
-                    <div class="product" onclick="window.location.href='bosch.html'">
-                        <h4>דגם 2BOSCH</h4>
-                        <img src="https://m.media-amazon.com/images/I/81Ad7+l3gWL._AC_SX679_.jpg" alt="מוצר בוש" />
-                        <p>מוצר נוסף איכותי מבית בוש.</p>
+                    <div class="product" onclick="openProduct('https://example.com/bosch2')">
+                        <h4>דגם GLM50C</h4>
+                        <img src="https://m.media-amazon.com/images/I/71xy0mBHbnL._AC_SX679_.jpg" alt="מוצר בוש GLM50C" />
+                        <p>מכשיר מדידה באמצעות לייזר. מחיר: ₪400</p>
                     </div>
                 </div>
             </section>
