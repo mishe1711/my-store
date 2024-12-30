@@ -4,23 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>פיצו לגן ולקבלן - מוצרים</title>
+    <title>פיצו לגן ולקבלן - מוצרי עבודה מקצועיים</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
             background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 10px 0;
+            background: #3F51B5; /* צבע רקע כהה */
+            color: white;
+        }
+        h1 {
+            margin: 0;
+        }
+        h2 {
+            margin-bottom: 20px;
         }
         .product-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
             max-width: 1200px;
+            margin: auto;
         }
         .product {
             border: 1px solid #ccc;
@@ -29,23 +39,30 @@
             text-align: center;
             background-color: #ffffff;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .product:hover {
+            transform: scale(1.05); /* אפקט צמיחה בהונאה */
         }
         img {
             max-width: 100%;
             height: auto;
         }
-        h1 {
-            margin-bottom: 20px;
-        }
-        h3 {
-            color: #333; /* צבע כותרות */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            background: #3F51B5; /* צבע רקע כהה */
+            color: white;
         }
     </style>
 </head>
 <body>
 
-    <h1>פיצו לגן ולקבלן</h1>
-    <h2>מוצרים לעבודה מקצועית</h2>
+    <header>
+        <h1>פיצו לגן ולקבלן</h1>
+        <h2>מוצרים לעבודה מקצועית</h2>
+    </header>
     
     <div class="product-container">
 
@@ -103,6 +120,10 @@
         </div>
 
     </div>
+
+    <footer>
+        <p>© 2023 פיצו לגן ולקבלן</p>
+    </footer>
 
 </body>
 </html>
