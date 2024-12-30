@@ -4,33 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>פיצו לגן ולקבלן - מוצרי עבודה מקצועיים</title>
+    <title>פיצו לגן ולקבלן - מוצרים</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             background-color: #f8f8f8;
-            color: #333;
-        }
-        header {
-            text-align: center;
-            padding: 10px 0;
-            background: #3F51B5; /* צבע רקע כהה */
-            color: white;
-        }
-        h1 {
-            margin: 0;
-        }
-        h2 {
-            margin-bottom: 20px;
         }
         .product-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
             max-width: 1200px;
-            margin: auto;
         }
         .product {
             border: 1px solid #ccc;
@@ -39,91 +29,77 @@
             text-align: center;
             background-color: #ffffff;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        .product:hover {
-            transform: scale(1.05); /* אפקט צמיחה בהונאה */
+            cursor: pointer; /* מצביע של עכבר */
         }
         img {
             max-width: 100%;
             height: auto;
         }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-            background: #3F51B5; /* צבע רקע כהה */
-            color: white;
+        h1 {
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>פיצו לגן ולקבלן</h1>
-        <h2>מוצרים לעבודה מקצועית</h2>
-    </header>
+    <h1>מוצרים לעבודה מקצועית</h1>
     
     <div class="product-container">
 
         <!-- DEWALT Products -->
-        <div class="product">
+        <div class="product" onclick="window.location.href='devalt.html';">
             <h3>DEWALT DCD771</h3>
             <img src="https://m.media-amazon.com/images/I/71j5W5puLWL._AC_SX679_.jpg" alt="DEWALT DCD771" />
             <p>מקדחה חשמלית קומפקטית.</p>
         </div>
-        <div class="product">
+        <div class="product" onclick="window.location.href='devalt.html';">
             <h3>DEWALT DCD996</h3>
             <img src="https://m.media-amazon.com/images/I/71Pi2ZyDloL._AC_SX679_.jpg" alt="DEWALT DCD996" />
             <p>מקדחת פטיש.</p>
         </div>
-        <div class="product">
+        <div class="product" onclick="window.location.href='devalt.html';">
             <h3>DEWALT DCH273B</h3>
             <img src="https://m.media-amazon.com/images/I/81OYeKk1UhL._AC_SX679_.jpg" alt="DEWALT DCH273B" />
             <p>מקדחת פטיש מקצועית.</p>
         </div>
 
         <!-- Makita Products -->
-        <div class="product">
+        <div class="product" onclick="window.location.href='makita.html';">
             <h3>Makita DHP481</h3>
             <img src="https://m.media-amazon.com/images/I/71CS5TQWqCL._AC_SX679_.jpg" alt="Makita DHP481" />
             <p>מקדחת פטיש עם טכנולוגיית חוטי-מחשבים.</p>
         </div>
-        <div class="product">
+        <div class="product" onclick="window.location.href='makita.html';">
             <h3>Makita XFD131</h3>
             <img src="https://m.media-amazon.com/images/I/91pYamN2fFAL._AC_SX679_.jpg" alt="Makita XFD131" />
             <p>מקדחה חשמלית נטענת 18V.</p>
         </div>
 
         <!-- HUSQVARNA Products -->
-        <div class="product">
+        <div class="product" onclick="window.location.href='husqvarna.html';">
             <h3>HUSQVARNA T540XP</h3>
             <img src="https://m.media-amazon.com/images/I/81hAsrYw5dL._AC_SX679_.jpg" alt="HUSQVARNA T540XP" />
             <p>מסור שרשרת מקצועי.</p>
         </div>
-        <div class="product">
+        <div class="product" onclick="window.location.href='husqvarna.html';">
             <h3>HUSQVARNA 450 Rancher</h3>
             <img src="https://m.media-amazon.com/images/I/71Mk49IoDUL._AC_SX679_.jpg" alt="HUSQVARNA 450 Rancher" />
             <p>פתרון לקיצוץ עצים.</p>
         </div>
 
         <!-- BOSCH Products -->
-        <div class="product">
+        <div class="product" onclick="window.location.href='bosch.html';">
             <h3>BOSCH GSR18V-190</h3>
             <img src="https://m.media-amazon.com/images/I/71CzqCuBOUL._AC_SX679_.jpg" alt="BOSCH GSR18V-190" />
             <p>מקדחה/פטיש 18 וולט.</p>
         </div>
-        <div class="product">
+        <div class="product" onclick="window.location.href='bosch.html';">
             <h3>BOSCH GLM50C</h3>
             <img src="https://m.media-amazon.com/images/I/71xy0mBHbnL._AC_SX679_.jpg" alt="BOSCH GLM50C" />
             <p>מכשיר מדידה באמצעות לייזר.</p>
         </div>
 
     </div>
-
-    <footer>
-        <p>© 2023 פיצו לגן ולקבלן</p>
-    </footer>
 
 </body>
 </html>
