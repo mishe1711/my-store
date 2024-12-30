@@ -14,18 +14,18 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* יישור למרכז */
-            background-color: #f1f1f1; /* צבע רקע אחיד */
+            justify-content: center; 
+            background-color: #f1f1f1; 
         }
 
         #container {
-            max-width: 1200px; /* הגבלת רוחב האתר */
+            max-width: 1200px; 
             width: 100%;
             margin: auto;
         }
 
         header {
-            background: #3F51B5; /* צבע רקע כהה */
+            background: #3F51B5; 
             color: white;
             padding: 10px 0;
             text-align: center;
@@ -47,13 +47,13 @@
         }
 
         .hero {
-            background: #EDE7F6; /* צבע בהיר */
+            background: #EDE7F6; 
             padding: 20px 0;
             text-align: center;
         }
 
         .btn {
-            background: #FF5722; /* צבע כפתור */
+            background: #FF5722; 
             color: white;
             padding: 10px 20px;
             border: none;
@@ -63,7 +63,7 @@
         }
 
         .btn:hover {
-            background: #FF8A65; /* צבע כפתור בהונאה */
+            background: #FF8A65; 
         }
 
         #search {
@@ -81,7 +81,7 @@
         #brands {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px; /* רווח בין הכרטיסים */
+            gap: 20px; 
             padding: 20px; 
         }
 
@@ -95,7 +95,7 @@
         }
 
         .brand:hover {
-            transform: scale(1.05); /* אפקט צמיחה בהונאה */
+            transform: scale(1.05); 
         }
 
         footer {
@@ -117,7 +117,7 @@
             border-radius: 5px;
             padding: 15px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            display: none; /* ברירת מחדל מוסתר */
+            display: none; 
         }
 
         .cart-item {
@@ -158,17 +158,21 @@
 
             <section id="brands">
                 <h2>מותגים</h2>
-                <div class="brand" onclick="toggleProducts('makita')" style="background-color: #AEEEEE;">
+                <div class="brand" onclick="toggleProducts('makita')" style="background-color: #4DB6AC;">
                     <h3>מקיטה</h3>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Makita_logo.svg/1200px-Makita_logo.svg.png" alt="מקיטה" style="width: 100px;">
                 </div>
-                <div class="brand" onclick="toggleProducts('dewalt')" style="background-color: #FFD700;">
+                <div class="brand" onclick="toggleProducts('dewalt')" style="background-color: #FDD835;">
                     <h3>דיוולט</h3>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/DeWalt_logo.svg/1200px-DeWalt_logo.svg.png" alt="דיוולט" style="width: 100px;">
                 </div>
-                <div class="brand" onclick="toggleProducts('bosch')" style="background-color: #87CEFA;">
+                <div class="brand" onclick="toggleProducts('bosch')" style="background-color: #0072B8;">
                     <h3>בוש</h3>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Bosch_logo.svg/2560px-Bosch_logo.svg.png" alt="בוש" style="width: 100px;">
                 </div>
-                <div class="brand" onclick="toggleProducts('husqvarna')" style="background-color: #FFB6C1;">
+                <div class="brand" onclick="toggleProducts('husqvarna')" style="background-color: #FF6F20;">
                     <h3>אוסקוורנה</h3>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Husqvarna_logo.svg/2560px-Husqvarna_logo.svg.png" alt="אוסקוורנה" style="width: 100px;">
                 </div>
             </section>
 
@@ -300,13 +304,13 @@
             });
 
             totalDisplay.innerText = `סך הכל: ${total} ש"ח`;
-            document.getElementById('cart').style.display = 'block'; // להציג את העגלה
+            document.getElementById('cart').style.display = 'block'; 
         }
 
         function checkout() {
-            alert("תודה על רכישתך!"); // כפתור לבדוק את התשלום
-            cart = []; // לאפס את העגלה
-            updateCart(); // לעדכן את העגלה
+            alert("תודה על רכישתך!"); 
+            cart = []; 
+            updateCart(); 
         }
     </script>
 </body>
