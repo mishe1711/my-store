@@ -33,23 +33,16 @@
         nav ul {
             list-style: none;
             padding: 0;
-            text-align: center;
         }
 
         nav ul li {
             display: inline;
-            margin: 0 10px;
+            margin: 0 15px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            padding: 10px 15px;
-        }
-
-        nav a:hover {
-            background: #FF5722;
-            border-radius: 5px; /* מעגל את הפינות בעת ההונאה */
         }
 
         .hero {
@@ -106,8 +99,11 @@
         /* צבעים עבור כל מותג */
         .brand-dewalt { background-color: #FFD700; }
         .brand-makita { background-color: #009688; }
-        .brand-husqvarna { background-color: #FF5722; }
+        .brand-milwaukee { background-color: #D00000; } /* צבע מותג מילוקי */
         .brand-bosch { background-color: #4CAF50; }
+        .brand-hikoki { background-color: #FF5722; } /* צבע מותג היקוקי */
+        .brand-kress { background-color: #F0F0F0; } /* צבע מותג קרס */
+        .brand-rex { background-color: #616161; } /* צבע מותג ורקס */
 
         footer {
             text-align: center;
@@ -138,10 +134,10 @@
                     <li><a href="#electric-tools">כלים חשמליים</a></li>
                     <li><a href="#saws">מסורים</a></li>
                     <li><a href="#accessories">אביזרים נילווים לכלי עבודה</a></li>
-                    <li><a href="#construction">ציוד לבנין ולתעשייה</a></li>
+                    <li><a href="#construction">ציוד לבנין ולעשייה</a></li>
                     <li><a href="#technical-equipment">ציוד טכני</a></li>
                     <li><a href="#home-garden">לבית ולגן</a></li>
-                    <li><a href="#movers-tools">כלים למוסך</a></li>
+                    <li><a href="#movers-tools">כלים למובלה</a></li>
                 </ul>
             </nav>
         </header>
@@ -161,7 +157,90 @@
 
             <section id="products">
                 <h2>מוצרים</h2>
-                <!-- הוסף כאן את פרטי המוצרים כמו בדוגמה הקודמת -->
+                
+                <div class="brands brand-dewalt">
+                    <h3>DEWALT</h3>
+                    <div class="product" onclick="openProduct('https://example.com/dewalt1')">
+                        <h4>דגם 1 DEWALT</h4>
+                        <img src="https://m.media-amazon.com/images/I/61FJTP4X7TL._AC_SX679_.jpg" alt="מוצר דיוולט" />
+                        <p>מוצר מדהים שמחזיק לאורך זמן.</p>
+                    </div>
+                    <div class="product" onclick="openProduct('https://example.com/dewalt2')">
+                        <h4>דגם 2 DEWALT</h4>
+                        <img src="https://m.media-amazon.com/images/I/61FJTP4X7TL._AC_SX679_.jpg" alt="מוצר דיוולט" />
+                        <p>מוצר נוסף מדהים.</p>
+                    </div>
+                </div>
+
+                <div class="brands brand-makita">
+                    <h3>Makita</h3>
+                    <div class="product" onclick="openProduct('https://example.com/makita1')">
+                        <h4>דגם 1 Makita</h4>
+                        <img src="https://m.media-amazon.com/images/I/61MLCCVf9pL._AC_SX679_.jpg" alt="מוצר מקיטה" />
+                        <p>מוצר איכותי שמציע פתרונות אמינים.</p>
+                    </div>
+                    <div class="product" onclick="openProduct('https://example.com/makita2')">
+                        <h4>דגם 2 Makita</h4>
+                        <img src="https://m.media-amazon.com/images/I/61MLCCVf9pL._AC_SX679_.jpg" alt="מוצר מקיטה" />
+                        <p>מוצר נוסף מדהים מקיטה.</p>
+                    </div>
+                </div>
+
+                <div class="brands brand-milwaukee">
+                    <h3>MILWAUKEE</h3>
+                    <div class="product" onclick="openProduct('https://example.com/milwaukee1')">
+                        <h4>דגם 1 MILWAUKEE</h4>
+                        <img src="https://m.media-amazon.com/images/I/81sHPAuSHeL._AC_SX679_.jpg" alt="מוצר מילוקי" />
+                        <p>מוצר חזק ומהיר במיוחד.</p>
+                    </div>
+                    <div class="product" onclick="openProduct('https://example.com/milwaukee2')">
+                        <h4>דגם 2 MILWAUKEE</h4>
+                        <img src="https://m.media-amazon.com/images/I/81sHPAuSHeL._AC_SX679_.jpg" alt="מוצר מילוקי" />
+                        <p>כלי עבודה מתקדמים.</p>
+                    </div>
+                </div>
+
+                <div class="brands brand-bosch">
+                    <h3>BOSCH</h3>
+                    <div class="product" onclick="openProduct('https://example.com/bosch1')">
+                        <h4>דגם 1 BOSCH</h4>
+                        <img src="https://m.media-amazon.com/images/I/81Ad7+l3gWL._AC_SX679_.jpg" alt="מוצר בוש" />
+                        <p>מותג אמין עם פתרונות מתקדמים.</p>
+                    </div>
+                    <div class="product" onclick="openProduct('https://example.com/bosch2')">
+                        <h4>דגם 2 BOSCH</h4>
+                        <img src="https://m.media-amazon.com/images/I/81Ad7+l3gWL._AC_SX679_.jpg" alt="מוצר בוש" />
+                        <p>מוצר נוסף איכותי מבית בוש.</p>
+                    </div>
+                </div>
+
+                <div class="brands brand-hikoki">
+                    <h3>HIKOKI</h3>
+                    <div class="product" onclick="openProduct('https://example.com/hikoki1')">
+                        <h4>דגם 1 HIKOKI</h4>
+                        <img src="https://example.com/hikoki1.jpg" alt="מוצר היקוקי" />
+                        <p>תוצר מדהים מבית היקוקי.</p>
+                    </div>
+                </div>
+
+                <div class="brands brand-kress">
+                    <h3>KRESS</h3>
+                    <div class="product" onclick="openProduct('https://example.com/kress1')">
+                        <h4>דגם 1 KRESS</h4>
+                        <img src="https://example.com/kress1.jpg" alt="מוצר קרס" />
+                        <p>איכות גבוהה לכל הבנאים.</p>
+                    </div>
+                </div>
+
+                <div class="brands brand-rex">
+                    <h3>REX</h3>
+                    <div class="product" onclick="openProduct('https://example.com/rex1')">
+                        <h4>דגם 1 REX</h4>
+                        <img src="https://example.com/rex1.jpg" alt="מוצר ורקס" />
+                        <p>כלים איכותיים לכל עבודה.</p>
+                    </div>
+                </div>
+
             </section>
 
             <section id="about">
