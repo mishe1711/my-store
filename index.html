@@ -86,6 +86,26 @@
             text-align: center;
             padding: 10px 0;
         }
+
+        /* עיצוב עבור מוצרי BOSCH */
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-bosch {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -114,68 +134,24 @@
             <section id="products">
                 <h2>מוצרים</h2>
                 
-                <div class="brands brand-dewalt">
-                    <h3>DEWALT</h3>
-                    <div class="product" onclick="openProduct('https://example.com/dewalt1')">
-                        <h4>דגם 1DEWALT</h4>
-                        <img src="https://m.media-amazon.com/images/I/61FJTP4X7TL._AC_SX679_.jpg" alt="מוצר דיוולט" />
-                        <p>קוד מוצר: DCD771</p>
-                        <ul>
-                            <li>מתח: 18V</li>
-                            <li>תיאור: מקדחה חשמלית קומפקטית שמחזיקה לאורך זמן.</li>
-                        </ul>
-                    </div>
-                    <div class="product" onclick="openProduct('https://example.com/dewalt2')">
-                        <h4>דגם 2DEWALT</h4>
-                        <img src="https://m.media-amazon.com/images/I/61FJTP4X7TL._AC_SX679_.jpg" alt="מוצר דיוולט" />
-                        <p>קוד מוצר: DCD996</p>
-                        <ul>
-                            <li>מתח: 18V</li>
-                            <li>תיאור: מוצר נוסף מדהים.</li>
-                        </ul>
-                    </div>
-                </div>
-
                 <div class="brands brand-makita">
                     <h3>Makita</h3>
                     <div class="product" onclick="openProduct('https://example.com/makita1')">
-                        <h4>דגם 1Makita</h4>
-                        <img src="https://m.media-amazon.com/images/I/61MLCCVf9pL._AC_SX679_.jpg" alt="מוצר מקיטה" />
+                        <h4>מברגה/מקדחה רוטטת DHP458Z</h4>
+                        <img src="https://tse4.mm.bing.net/th?id=OIP.NZWVzj0vGh5b-KLeEoOLRAHaIe&pid=Api" alt="מברגה/מקדחה רוטטת DHP458Z" />
                         <p>קוד מוצר: DHP458Z</p>
                         <ul>
                             <li>מתח: 18V</li>
-                            <li>תיאור: מברגה/מקדחה רוטטת 18V, מומנט גבוה.</li>
+                            <li>תיאור: מברגה/מקדחה רוטטת 18V, מומנט גבוה, מתאימה לקידוח והברגה במגוון חומרים.</li>
                         </ul>
                     </div>
                     <div class="product" onclick="openProduct('https://example.com/makita2')">
-                        <h4>דגם 2Makita</h4>
-                        <img src="https://m.media-amazon.com/images/I/61MLCCVf9pL._AC_SX679_.jpg" alt="מוצר מקיטה" />
+                        <h4>פטישון נטען DHR202Z</h4>
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.1AZdq7Ve9KjJzbjs6QgOMwHaEz&pid=Api" alt="פטישון נטען DHR202Z" />
                         <p>קוד מוצר: DHR202Z</p>
                         <ul>
                             <li>מתח: 18V</li>
-                            <li>תיאור: פטישון עם שלושה מצבי עבודה.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="brands brand-husqvarna">
-                    <h3>HUSQVARNA</h3>
-                    <div class="product" onclick="openProduct('https://example.com/husqvarna1')">
-                        <h4>דגם 1HUSQVARNA</h4>
-                        <img src="https://m.media-amazon.com/images/I/71XXdWoSieL._AC_SX679_.jpg" alt="מוצר אוסקוורנה" />
-                        <p>קוד מוצר: T540XP</p>
-                        <ul>
-                            <li>מתח: 50.2CC</li>
-                            <li>תיאור: מסור שרשרת מקצועי, פתרון מושלם.</li>
-                        </ul>
-                    </div>
-                    <div class="product" onclick="openProduct('https://example.com/husqvarna2')">
-                        <h4>דגם 2HUSQVARNA</h4>
-                        <img src="https://m.media-amazon.com/images/I/71XXdWoSieL._AC_SX679_.jpg" alt="מוצר אוסקוורנה" />
-                        <p>קוד מוצר: 450 Rancher</p>
-                        <ul>
-                            <li>מתח: 50CC</li>
-                            <li>תיאור: פתרון לקיצוץ עצים.</li>
+                            <li>תיאור: פטישון עם שלושה מצבי עבודה: קידוח, קידוח עם רטט וחציבה קלה.</li>
                         </ul>
                     </div>
                 </div>
@@ -184,19 +160,19 @@
                     <h3>BOSCH</h3>
                     <div class="product" onclick="openProduct('https://example.com/bosch1')">
                         <h4>דגם 1BOSCH</h4>
-                        <img src="https://m.media-amazon.com/images/I/81Ad7+l3gWL._AC_SX679_.jpg" alt="מוצר בוש" />
+                        <img src="https://m.media-amazon.com/images/I/71CzqCuBOUL._AC_SX679_.jpg" alt="BOSCH GSR18V-190" />
                         <p>קוד מוצר: GSR18V-190</p>
                         <ul>
                             <li>מתח: 18V</li>
-                            <li>תיאור: מקדחה/פטיש אמינה.</li>
+                            <li>תיאור: מקדחה/פטיש 18 וולט.</li>
                         </ul>
                     </div>
                     <div class="product" onclick="openProduct('https://example.com/bosch2')">
                         <h4>דגם 2BOSCH</h4>
-                        <img src="https://m.media-amazon.com/images/I/81Ad7+l3gWL._AC_SX679_.jpg" alt="מוצר בוש" />
+                        <img src="https://m.media-amazon.com/images/I/71xy0mBHbnL._AC_SX679_.jpg" alt="BOSCH GLM50C" />
                         <p>קוד מוצר: GLM50C</p>
                         <ul>
-                            <li>מתח: 50m</li>
+                            <li>מתח: לייזר</li>
                             <li>תיאור: מכשיר מדידה באמצעות לייזר.</li>
                         </ul>
                     </div>
