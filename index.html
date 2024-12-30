@@ -21,6 +21,7 @@
         #container {
             max-width: 1200px; /* הגבלת רוחב האתר */
             width: 100%;
+            margin: auto;
         }
 
         header {
@@ -58,6 +59,7 @@
             border: none;
             cursor: pointer;
             text-decoration: none;
+            margin-bottom: 15px;
         }
 
         .btn:hover {
@@ -76,31 +78,25 @@
             border-radius: 5px;
         }
 
-        #products {
+        #brands {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px; /* רווח בין הכרטיסים */
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px; /* רווח בין הכרטיסים */
             padding: 20px; 
         }
 
-        .product {
+        .brand {
             border: 1px solid #DDD;
             border-radius: 5px;
             padding: 15px;
             text-align: center;
+            cursor: pointer;
             transition: transform 0.3s;
-            cursor: pointer; /* מצביע של עכבר */
         }
 
-        .product:hover {
+        .brand:hover {
             transform: scale(1.05); /* אפקט צמיחה בהונאה */
         }
-
-        /* צבעים עבור כל מותג */
-        .brand-dewalt { background-color: #FFD700; }
-        .brand-makita { background-color: #009688; }
-        .brand-husqvarna { background-color: #FF5722; }
-        .brand-bosch { background-color: #4CAF50; }
 
         footer {
             text-align: center;
@@ -136,14 +132,28 @@
                 <div class="hero-content">
                     <h2>החנות שלנו</h2>
                     <p>ברוכים הבאים לחנות שלנו, היעד האולטימטיבי למוצרים איכותיים במחירים נהדרים!</p>
-                    <a href="#products" class="btn">לראות מוצרים</a>
                 </div>
             </section>
 
-            <section id="products">
+            <section id="brands">
+                <h2>מותגים</h2>
+                <div class="brand" onclick="toggleProducts('dewalt')">
+                    <h3>DEWALT</h3>
+                </div>
+                <div class="brand" onclick="toggleProducts('makita')">
+                    <h3>Makita</h3>
+                </div>
+                <div class="brand" onclick="toggleProducts('husqvarna')">
+                    <h3>HUSQVARNA</h3>
+                </div>
+                <div class="brand" onclick="toggleProducts('bosch')">
+                    <h3>BOSCH</h3>
+                </div>
+            </section>
+
+            <section id="product-list" style="display: none;">
                 <h2>מוצרים</h2>
-                
-                <div class="brands brand-dewalt">
+                <div id="dewalt-products" class="products" style="display: none;">
                     <h3>DEWALT</h3>
                     <div class="product" onclick="openProduct('https://example.com/dewalt1')">
                         <h4>דגם 1 DEWALT</h4>
@@ -161,8 +171,8 @@
                         <p>מוצר חדש ומתקדם מבית דיוולט.</p>
                     </div>
                 </div>
-
-                <div class="brands brand-makita">
+                
+                <div id="makita-products" class="products" style="display: none;">
                     <h3>Makita</h3>
                     <div class="product" onclick="openProduct('https://example.com/makita1')">
                         <h4>דגם 1 Makita</h4>
@@ -181,7 +191,7 @@
                     </div>
                 </div>
 
-                <div class="brands brand-husqvarna">
+                <div id="husqvarna-products" class="products" style="display: none;">
                     <h3>HUSQVARNA</h3>
                     <div class="product" onclick="openProduct('https://example.com/husqvarna1')">
                         <h4>דגם 1 HUSQVARNA</h4>
@@ -200,7 +210,7 @@
                     </div>
                 </div>
 
-                <div class="brands brand-bosch">
+                <div id="bosch-products" class="products" style="display: none;">
                     <h3>BOSCH</h3>
                     <div class="product" onclick="openProduct('https://example.com/bosch1')">
                         <h4>דגם 1 BOSCH</h4>
@@ -241,6 +251,21 @@
     <script>
         function openProduct(url) {
             window.open(url, '_blank'); // פותח חלון חדש
+        }
+
+        function toggleProducts(brand) {
+            const productList = document.getElementById('product-list');
+            const dewaltProducts = document.getElementById('dewalt-products');
+            const makitaProducts = document.getElementById('makita-products');
+            const husqvarnaProducts = document.getElementById('husqvarna-products');
+            const boschProducts = document.getElementById('bosch-products');
+
+            productList.style.display = 'block';
+
+            dewaltProducts.style.display = (brand === 'dewalt') ? 'block' : 'none';
+            makitaProducts.style.display = (brand === 'makita') ? 'block' : 'none';
+            husqvarnaProducts.style.display = (brand === 'husqvarna') ? 'block' : 'none';
+            boschProducts.style.display = (brand === 'bosch') ? 'block' : 'none';
         }
     </script>
 </body>
