@@ -14,7 +14,7 @@
             justify-content: center;
             flex-direction: column;
             align-items: center;
-            background-color: #f8f8f8; /* צבע רקע ברור */
+            background-color: #f8f8f8;
         }
         .product-container {
             display: grid;
@@ -27,8 +27,9 @@
             border-radius: 5px;
             padding: 15px;
             text-align: center;
-            background-color: #ffffff; /* צבע רקע של המוצר */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* הצללה קלה */
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer; /* מצביע של עכבר */
         }
         img {
             max-width: 100%;
@@ -36,9 +37,6 @@
         }
         h1 {
             margin-bottom: 20px;
-        }
-        h3 {
-            color: #333; /* צבע כותרות */
         }
     </style>
 </head>
@@ -49,71 +47,56 @@
     <div class="product-container">
 
         <!-- DEWALT Products -->
-        <div class="product">
+        <div class="product" onclick="window.location.href='devalt.html';">
             <h3>DEWALT DCD771</h3>
             <img src="https://m.media-amazon.com/images/I/71j5W5puLWL._AC_SX679_.jpg" alt="DEWALT DCD771" />
             <p>מקדחה חשמלית קומפקטית.</p>
         </div>
-        <div class="product">
+        <div class="product" onclick="window.location.href='devalt.html';">
             <h3>DEWALT DCD996</h3>
             <img src="https://m.media-amazon.com/images/I/71Pi2ZyDloL._AC_SX679_.jpg" alt="DEWALT DCD996" />
             <p>מקדחת פטיש.</p>
         </div>
-        <div class="product">
+        <div class="product" onclick="window.location.href='devalt.html';">
             <h3>DEWALT DCH273B</h3>
             <img src="https://m.media-amazon.com/images/I/81OYeKk1UhL._AC_SX679_.jpg" alt="DEWALT DCH273B" />
             <p>מקדחת פטיש מקצועית.</p>
         </div>
 
         <!-- Makita Products -->
-        <div class="product">
+        <div class="product" onclick="window.location.href='makita.html';">
             <h3>Makita DHP481</h3>
             <img src="https://m.media-amazon.com/images/I/71CS5TQWqCL._AC_SX679_.jpg" alt="Makita DHP481" />
             <p>מקדחת פטיש עם טכנולוגיית חוטי-מחשבים.</p>
         </div>
-        <div class="product">
+        <div class="product" onclick="window.location.href='makita.html';">
             <h3>Makita XFD131</h3>
             <img src="https://m.media-amazon.com/images/I/91pYamN2fFAL._AC_SX679_.jpg" alt="Makita XFD131" />
             <p>מקדחה חשמלית נטענת 18V.</p>
         </div>
-        <div class="product">
-            <h3>Makita GA9020</h3>
-            <img src="https://m.media-amazon.com/images/I/61BtZQZwgaL._AC_SX679_.jpg" alt="Makita GA9020" />
-            <p>מקצועי עם ביצועים גבוהים.</p>
-        </div>
 
         <!-- HUSQVARNA Products -->
-        <div class="product">
+        <div class="product" onclick="window.location.href='husqvarna.html';">
             <h3>HUSQVARNA T540XP</h3>
             <img src="https://m.media-amazon.com/images/I/81hAsrYw5dL._AC_SX679_.jpg" alt="HUSQVARNA T540XP" />
             <p>מסור שרשרת מקצועי.</p>
         </div>
-        <div class="product">
+        <div class="product" onclick="window.location.href='husqvarna.html';">
             <h3>HUSQVARNA 450 Rancher</h3>
             <img src="https://m.media-amazon.com/images/I/71Mk49IoDUL._AC_SX679_.jpg" alt="HUSQVARNA 450 Rancher" />
             <p>פתרון לקיצוץ עצים.</p>
         </div>
-        <div class="product">
-            <h3>HUSQVARNA 125B</h3>
-            <img src="https://m.media-amazon.com/images/I/71nZZQpdEvL._AC_SX679_.jpg" alt="HUSQVARNA 125B" />
-            <p>מדחס דשא מקצועי.</p>
-        </div>
 
         <!-- BOSCH Products -->
-        <div class="product">
+        <div class="product" onclick="window.location.href='bosch.html';">
             <h3>BOSCH GSR18V-190</h3>
             <img src="https://m.media-amazon.com/images/I/71CzqCuBOUL._AC_SX679_.jpg" alt="BOSCH GSR18V-190" />
             <p>מקדחה/פטיש 18 וולט.</p>
         </div>
-        <div class="product">
+        <div class="product" onclick="window.location.href='bosch.html';">
             <h3>BOSCH GLM50C</h3>
             <img src="https://m.media-amazon.com/images/I/71xy0mBHbnL._AC_SX679_.jpg" alt="BOSCH GLM50C" />
             <p>מכשיר מדידה באמצעות לייזר.</p>
-        </div>
-        <div class="product">
-            <h3>BOSCH GWS18V-45</h3>
-            <img src="https://m.media-amazon.com/images/I/81eQtM1AdAL._AC_SX679_.jpg" alt="BOSCH GWS18V-45" />
-            <p>גריינדר חשמלי נטען.</p>
         </div>
 
     </div>
