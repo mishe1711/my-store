@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
     <style>
         body {
-            background-color: #FAF3E0; /* צבע רקע רגוע */
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
@@ -16,36 +15,31 @@
             display: flex;
             flex-direction: column;
             justify-content: center; 
-            color: #333333; /* טקסט כהה יותר */
+            background-color: #f1f1f1; 
         }
 
         #container {
             max-width: 1200px; 
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.8); /* רקע לבן עם שקיפות קלה */
-            border-radius: 8px; /* רדיוס לפינות רכות */
-            padding: 20px; /* ריווח פנימי */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* צל קל להדגשה */
         }
 
         header {
-            text-align: center;
+            background: #3F51B5; 
+            color: white;
             padding: 10px 0;
-        }
-
-        h1 {
-            color: #A3D3E0; /* צבע תכלת לכותרת */
+            text-align: center;
+            position: relative; 
         }
 
         .cart {
             position: absolute; 
             right: 20px; 
             top: 10px; 
-            color: #333333;
+            color: white;
         }
 
         .cart a {
-            color: #333333;
+            color: white;
             text-decoration: none;
             font-size: 18px; /* גודל הטקסט */
         }
@@ -62,26 +56,39 @@
         }
 
         nav a {
-            color: #A3D3E0; /* צבע תכלת לתפריט */
+            color: white;
             text-decoration: none;
         }
 
-        nav a:hover {
-            text-decoration: underline; /* קו תחתון בעת ריחוף */
+        .hero {
+            background: #EDE7F6; 
+            padding: 20px 0;
+            text-align: center;
         }
 
         .btn {
-            background: #A3D3E0; /* צבע כפתור תכלת */
+            background: #FF5722; 
             color: white;
             padding: 10px 20px;
             border: none;
             cursor: pointer;
             text-decoration: none;
-            border-radius: 5px; /* קצוות רכים */
         }
 
         .btn:hover {
-            background: #8AB8C9; /* גוון כהה יותר בעת ריחוף */
+            background: #FF8A65; 
+        }
+
+        #search {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        #search input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
         #products {
@@ -102,6 +109,15 @@
             background-color: #FFFFFF; /* צבע רקע חלונית */
         }
 
+        /* צבעי רקע מותאמים לכל מותג */
+        .brand-dewalt { background-color: #FFD700; }
+        .brand-makita { background-color: #009688; }
+        .brand-milwaukee { background-color: #D00000; }
+        .brand-bosch { background-color: #4CAF50; }
+        .brand-hikoki { background-color: #FF5722; }
+        .brand-kress { background-color: #F0F0F0; }
+        .brand-rex { background-color: #616161; }
+
         .product:hover {
             transform: scale(1.05); /* אפקט צמיחה */
         }
@@ -109,7 +125,6 @@
         footer {
             text-align: center;
             padding: 10px 0;
-            color: #333333; /* צבע כהה לכיתובfooter */
         }
 
         .contact-info {
@@ -219,20 +234,8 @@
             </section>
 
             <section id="about">
-                <h2 style="text-align: center;">אודות החנות</h2>
-                <p style="text-align: center;">
-                    החנות שלנו נוסדה מתוך אהבה למקצוע וללקוחותינו. אנו מתמקדים במתן מוצרים איכותיים במחירים נוחים, 
-                    ומשקיעים את מיטב מאמצינו כדי לספק חוויית קנייה יוצאת דופן.
-                </p>
-                <p style="text-align: center;">
-                    צוות החנות מורכב מאנשים מקצועיים ומנוסים, שמכירים את תחום הכלים והציוד לעומק. 
-                    אנו כאן כדי לייעץ ולעזור לכם למצוא את המוצרים המתאימים ביותר לצרכים שלכם. בין אם אתם קבלנים מקצועיים 
-                    או חובבי DIY, החנות שלנו מציעה מגוון רחב של כלים, אביזרים וציוד לעבודה ולגן.
-                </p>
-                <p style="text-align: center;">
-                    אנו מאמינים בשירות לקוחות מצוין, ולכן אתם מוזמנים לפנות אלינו בכל שאלה או פניה. 
-                    אנו כאן כדי לוודא שתצאו מרוצים עם כל רכישה.
-                </p>
+                <h2>אודות החנות</h2>
+                <p>החנות שלנו נוסדה עם מטרה אחת: להעניק ללקוחותינו מוצרים איכותיים במחירים נוחים. אנו מאמינים בשירות לקוחות מצוין.</p>
             </section>
 
             <section id="contact" class="contact-info">
