@@ -10,6 +10,20 @@ header {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    position: relative; /* כדי להניח את סל הקניות */
+}
+
+.cart {
+    position: absolute; /* ממקם את סל הקניות בצורה יחסית ל-header */
+    right: 20px; /* מיקום מהצד הימני */
+    top: 10px; /* מיקום מהחלק העליון */
+    color: white;
+}
+
+.cart a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* גודל הטקסט */
 }
 
 nav ul {
