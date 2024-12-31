@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
     <style>
         body {
-            background-image: url('path/to/your/countryside-image.jpg'); /* הכנס כאן את הכתובת של התמונה שלך */
-            background-size: cover;
-            background-position: center;
+            background-color: #FAF3E0; /* צבע רקע רגוע */
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
@@ -18,13 +16,16 @@
             display: flex;
             flex-direction: column;
             justify-content: center; 
-            color: white; /* שינוי צבע הטקסט לניגודיות טובה יותר */
+            color: #333333; /* טקסט כהה יותר */
         }
 
         #container {
             max-width: 1200px; 
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* צבע רקע חצי שקוף לד.container למניעת אובדן קריאות */
+            background-color: rgba(255, 255, 255, 0.8); /* רקע לבן עם שקיפות קלה */
+            border-radius: 8px; /* רדיוס לפינות רכות */
+            padding: 20px; /* ריווח פנימי */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* צל קל להדגשה */
         }
 
         header {
@@ -32,15 +33,19 @@
             padding: 10px 0;
         }
 
+        h1 {
+            color: #A3D3E0; /* צבע תכלת לכותרת */
+        }
+
         .cart {
             position: absolute; 
             right: 20px; 
             top: 10px; 
-            color: white;
+            color: #333333;
         }
 
         .cart a {
-            color: white;
+            color: #333333;
             text-decoration: none;
             font-size: 18px; /* גודל הטקסט */
         }
@@ -57,39 +62,26 @@
         }
 
         nav a {
-            color: white;
+            color: #A3D3E0; /* צבע תכלת לתפריט */
             text-decoration: none;
         }
 
-        .hero {
-            background: #EDE7F6; 
-            padding: 20px 0;
-            text-align: center;
+        nav a:hover {
+            text-decoration: underline; /* קו תחתון בעת ריחוף */
         }
 
         .btn {
-            background: #FF5722; 
+            background: #A3D3E0; /* צבע כפתור תכלת */
             color: white;
             padding: 10px 20px;
             border: none;
             cursor: pointer;
             text-decoration: none;
+            border-radius: 5px; /* קצוות רכים */
         }
 
         .btn:hover {
-            background: #FF8A65; 
-        }
-
-        #search {
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        #search input {
-            padding: 10px;
-            width: 300px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            background: #8AB8C9; /* גוון כהה יותר בעת ריחוף */
         }
 
         #products {
@@ -110,15 +102,6 @@
             background-color: #FFFFFF; /* צבע רקע חלונית */
         }
 
-        /* צבעי רקע מותאמים לכל מותג */
-        .brand-dewalt { background-color: #FFD700; }
-        .brand-makita { background-color: #009688; }
-        .brand-milwaukee { background-color: #D00000; }
-        .brand-bosch { background-color: #4CAF50; }
-        .brand-hikoki { background-color: #FF5722; }
-        .brand-kress { background-color: #F0F0F0; }
-        .brand-rex { background-color: #616161; }
-
         .product:hover {
             transform: scale(1.05); /* אפקט צמיחה */
         }
@@ -126,26 +109,7 @@
         footer {
             text-align: center;
             padding: 10px 0;
-        }
-
-        .contact-info {
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .directions {
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .directions a {
-            color: #3F51B5; /* צבע קישור */
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        .directions a:hover {
-            text-decoration: underline; /* קו תחתון בעת ריחוף */
+            color: #333333; /* צבע כהה לכיתובfooter */
         }
     </style>
 </head>
@@ -275,7 +239,7 @@
 
     <script>
         function openProduct(url) {
-            window.open(url, '_blank'); // פותח חלון חדש
+            window.open(url, '_blank');
         }
     </script>
 </body>
