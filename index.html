@@ -28,6 +28,20 @@
             color: white;
             padding: 10px 0;
             text-align: center;
+            position: relative; 
+        }
+
+        .cart {
+            position: absolute; 
+            right: 20px; 
+            top: 10px; 
+            color: white;
+        }
+
+        .cart a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px; /* גודל הטקסט */
         }
 
         nav ul {
@@ -138,6 +152,12 @@
     <div id="container">
         <header>
             <h1>ברוכים הבאים לפיצו לגן ולקבלן!</h1>
+            <div class="cart">
+                <a href="#cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span> <!-- מספר הפריטים בסל -->
+                </a>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#home">בית</a></li>
