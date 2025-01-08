@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>חנות כלי עבודה ופיצו לגן ולקבלן</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,8 +14,7 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center; 
+            justify-content: center; 
             background-color: #f1f1f1; 
         }
 
@@ -42,7 +41,7 @@
         .cart a {
             color: white;
             text-decoration: none;
-            font-size: 18px; /* גודל הטקסט */
+            font-size: 18px; 
         }
 
         nav ul {
@@ -106,8 +105,8 @@
             text-align: center;
             transition: transform 0.3s;
             cursor: pointer; 
-            height: 150px; /* גובה קבוע לחלוניות */
-            background-color: #FFFFFF; /* צבע רקע חלונית */
+            height: 150px; 
+            background-color: #FFFFFF; 
         }
 
         /* צבעי רקע מותאמים לכל מותג */
@@ -120,7 +119,7 @@
         .brand-rex { background-color: #616161; }
 
         .product:hover {
-            transform: scale(1.05); /* אפקט צמיחה */
+            transform: scale(1.05); 
         }
 
         footer {
@@ -139,30 +138,13 @@
         }
 
         .directions a {
-            color: #3F51B5; /* צבע קישור */
+            color: #3F51B5; 
             text-decoration: none;
             margin: 0 10px;
         }
 
         .directions a:hover {
-            text-decoration: underline; /* קו תחתון בעת ריחוף */
-        }
-
-        /* מעצב את הטופס */
-        form {
-            margin-top: 20px;
-            text-align: left; /* טקסט בימין */
-            display: flex;
-            flex-direction: column;
-            align-items: center; 
-        }
-
-        input, textarea {
-            width: 80%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            text-decoration: underline; 
         }
     </style>
 </head>
@@ -173,7 +155,7 @@
             <div class="cart">
                 <a href="#cart">
                     <i class="fas fa-shopping-cart"></i>
-                    <span id="cart-count">0</span> <!-- מספר הפריטים בסל -->
+                    <span id="cart-count">0</span> 
                 </a>
             </div>
             <nav>
@@ -182,6 +164,17 @@
                     <li><a href="#products">מוצרים</a></li>
                     <li><a href="#about">אודות</a></li>
                     <li><a href="#contact">יצירת קשר</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li><a href="#tools">כלי עבודה נטענים וחשמליים</a></li>
+                    <li><a href="#saws">מסורים</a></li>
+                    <li><a href="#accessories">אביזרים נלווים</a></li>
+                    <li><a href="#construction">ציוד לבניין ולתעשייה</a></li>
+                    <li><a href="#technical-equipment">ציוד טכני</a></li>
+                    <li><a href="#home-garden">לבית ולגן</a></li>
+                    <li><a href="#movers-tools">כלים למוסך</a></li>
                 </ul>
             </nav>
         </header>
@@ -246,26 +239,12 @@
 
             <section id="contact" class="contact-info">
                 <h2>פרטי יצירת קשר</h2>
+                <img src="logo.png" alt="לוגו החנות" style="width: 150px; height: auto; margin-bottom: 10px;"> <!-- הוספת הלוגו -->
                 <p>מספר טלפון: <strong>050-5599069</strong></p>
                 <p>יש לשלוח הודעות בוואצאפ ל: <strong>050-5599069</strong></p>
-                <p>אימייל: <strong>pizzotools@gmail.com</strong></p> <!-- עדכון האימייל כאן -->
-
-                <h3>השאירו את פרטיכם ואחזור אליכם</h3>
-                <p>אימייל לתשובה: <strong>pizzotools@gmail.com</strong></p> <!-- הוספת מייל זה כאן -->
-                <form id="contact-form" method="POST" action="your-backend-script.php">
-                    <label for="name">שם:</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email">אימייל:</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="message">הודעה:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-
-                    <button type="submit" class="btn">שלח</button>
-                </form>
+                <p>אימייל: <strong>example@mail.com</strong></p>
             </section>
-            
+
             <section class="directions">
                 <h2>דרכי הגעה לחנות</h2>
                 <p>אתה יכול להגיע לחנות שלנו באמצעות הקישורים הבאים:</p>
